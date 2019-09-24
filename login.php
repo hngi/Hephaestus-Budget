@@ -28,8 +28,8 @@
 
     <div class="login_page_wrapper">
         <div class="md-card" id="login_card">
-            <?php if (isset($error)) : ?>
-                <div class="md-card-content small-padding uk-text-center uk-alert uk-alert-warning"> <?php echo $error; ?></div>
+            <?php if (isset($fbk)) : ?>
+                <div class="md-card-content small-padding uk-text-center uk-alert uk-alert-<?php echo $fbk["color"]; ?>"> <?php echo $fbk["msg"]; ?></div>
             <?php endif; ?>
             <div class="md-card-content large-padding" id="login_form">
                 <div class="login_heading">
