@@ -14,29 +14,29 @@ if (isset($_POST['signup'])) {
     $rpass = clean_data('rpass');
     $validated = true;
     if (!empty($username) && !empty($email) && !empty($pass) && !empty($rpass)) {
-        $color = "danger";
+
         //check if username is already taken
 
         $user_exists = mysqli_query($conn, "SELECT  `username` FROM registered_user WHERE `username` = '{$username}'");
         $count = mysqli_num_rows($user_exists);
         if ($count == "1") {
             $validated = false;
-            $msg = "This username is already taken";
+            $error = "This username is already taken";
         }
 
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $validated = false;
-            $msg = "Enter a valid email address";
+            $error = "Enter a valid email address";
         }
 
         if (strlen($pass) < 4 || strlen($rpass) < 4) {
             $validated = false;
-            $msg = "Password must be minimum 4 characters";
+            $error = "Password must be minimum 4 characters";
         }
 
         if ($pass !== $rpass) {
             $validated = false;
-            $msg = "Passwords do not match";
+            $error = "Passwords do not match";
         }
 
         if ($validated == true) {
@@ -44,37 +44,34 @@ if (isset($_POST['signup'])) {
             $new_user_query =  mysqli_query($conn, "INSERT INTO registered_user(`username`, `email`, `password`) VALUES('$username', '$email',  '$pass')");
             if ($new_user_query == TRUE) {
                 $username = $email = "";
-                $msg = "Your registration was successful, you can login to your account";
-                $color = "success";
+                $success = "Your registration was successful, you can login to your account";
             } else {
-                $msg = "An error was encountered on registration";
+                $error = "An error was encountered on registration";
+
+                // mysqli_error($conn);
             }
         }
     } else {
         $validated = false;
-        $msg = "All fields are required";
-        $color = "danger";
+        $error = "All fields are required";
     }
-    $fbk = ["valitated" => $validated, "msg" => $msg, "color" => $color];
 }
+
 
 if (isset($_POST['login'])) {
     $username = clean_data('username');
     $pass = md5(clean_data('pass'));
+
     if (!empty($username) && !empty($pass)) {
         $login_query = mysqli_query($conn, "SELECT `username`, `password` FROM registered_user WHERE `username` = '{$username}' AND `password` = '{$pass}' ");
         // $fetch_user = mysqli_fetch_assoc($login_query);
         $count = mysqli_num_rows($login_query);
         if ($count == "0") {
-            $msg = "Incorrect username or password";
+            $error = "Incorrect username or password";
         } else {
-            $validated = true;
             header("location: ./");
-        }
+         }
     } else {
-        $validated = false;
-        $msg = "Enter username and password to login";
-        $color = "danger";
+        $error = "Enter username and password to login";
     }
-    $fbk = ["valitated" => $validated, "msg" => $msg, "color" => $color];
 }
