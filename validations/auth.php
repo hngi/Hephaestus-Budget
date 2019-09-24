@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect('localhost', 'root', '', 'altair');
+$conn = mysqli_connect('localhost', 'root', '', 'hephbudget');
 
 function clean_data($data)
 {
