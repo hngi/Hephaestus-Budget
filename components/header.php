@@ -10,45 +10,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" type="image/png" href="assets/img/favicon-16x16.png" sizes="16x16">
     <link rel="icon" type="image/png" href="assets/img/favicon-32x32.png" sizes="32x32">
-
     <title>HephBudget <?php echo $title ?></title>
-
-
     <!-- uikit -->
     <link rel="stylesheet" href="bower_components/uikit/css/uikit.almost-flat.min.css" media="all">
-
-    <!-- flag icons -->
-    <link rel="stylesheet" href="assets/icons/flags/flags.min.css" media="all">
-
-    <!-- style switcher -->
-    <link rel="stylesheet" href="assets/css/style_switcher.min.css" media="all">
-
     <!-- altair admin -->
     <link rel="stylesheet" href="assets/css/main.min.css" media="all">
-
-    <!-- themes -->
-    <link rel="stylesheet" href="assets/css/themes/themes_combined.min.css" media="all">
-
-    <!-- matchMedia polyfill for testing media queries in JS -->
-    <!--[if lte IE 9]>
-        <script type="text/javascript" src="bower_components/matchMedia/matchMedia.js"></script>
-        <script type="text/javascript" src="bower_components/matchMedia/matchMedia.addListener.js"></script>
-        <link rel="stylesheet" href="assets/css/ie.css" media="all">
-    <![endif]-->
-
 </head>
 
 <body class=" sidebar_main_open sidebar_main_swipe">
     <header id="header_main">
         <div class="header_main_content">
             <nav class="uk-navbar">
-
                 <!-- main sidebar switch -->
                 <a href="#" id="sidebar_main_toggle" class="sSwitch sSwitch_left">
                     <span class="sSwitchIcon"></span>
                 </a>
-
-
                 <div class="uk-navbar-flip">
                     <ul class="uk-navbar-nav user_actions">
                         <li data-uk-dropdown="{mode:'click',pos:'bottom-right'}" aria-haspopup="true" aria-expanded="false">
