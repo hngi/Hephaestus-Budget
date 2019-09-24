@@ -24,15 +24,16 @@
     <div class="login_page_wrapper">
         <div class="md-card" id="login_card">
             <?php if (isset($fbk)) : ?>
-                <div class="md-card-content small-padding uk-text-center uk-alert uk-alert-<?php echo $fbk["color"]; ?>"> <?php echo $fbk["msg"]; ?></div>
+                <div class="md-card-content small-padding uk-text-center uk-alert uk-alert-<?php echo $fbk["color"]; ?>">
+                    <small> <?php echo $fbk["msg"]; ?></small>
+                </div>
             <?php endif; ?>
             <div class="md-card-content large-padding" id="register_form">
-                <!-- <button type="button" class="uk-position-top-right uk-close uk-margin-right uk-margin-top back_to_login"></button> -->
                 <h2 class="heading_a uk-margin-medium-bottom">Create an account</h2>
                 <form method="post">
                     <div class="uk-form-row">
-                        <label for="register_username">Username</label>
-                        <input class="md-input" type="text" id="register_username" name="username" value="<?php echo isset($username) ? $username : '' ?>" />
+                        <label for="register_username">Full name</label>
+                        <input class="md-input" type="text" id="register_username" name="name" value="<?php echo isset($name) ? $name : '' ?>" />
                     </div>
                     <div class="uk-form-row">
                         <label for="register_email">E-mail</label>
