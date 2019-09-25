@@ -1,17 +1,20 @@
-<?php
-$url = getenv('JAWSDB_MARIA_URL');
-$dbparts = parse_url($url);
+<?php 
+$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
-// db configuuration for app hosted on heroku
-$host = $dbparts['host'];
-$username = $dbparts['user'];
-$password = $dbparts['pass'];
-$database = ltrim($dbparts['path'],'/');
+# db config for heroku
+$host = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$database = substr($url["path"], 1);
 
-// db configuration for localhost
+# db config for locahost
 // $host = "localhost";
 // $username = "root";
 // $password = "";
 // $database = "hephbudget";
 
 $conn = mysqli_connect("$host", "$username", "$password", $database);
+
+if($conn){
+    echo "connected";
+}
