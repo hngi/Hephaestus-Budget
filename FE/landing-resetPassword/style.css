@@ -1,0 +1,11 @@
+.body{
+    background-color: #00cbaa;
+    /* background-image: url('https://res.cloudinary.com/michelletakuro/image/upload/v1569348797/auth-bg.png');*/
+    background-repeat: no-repeat; 
+}
+.navbar{
+    width: 100%;
+    height: 12vh;
+    background-color: #229da5;
+    color: #fff;
+}
