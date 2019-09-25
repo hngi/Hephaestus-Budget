@@ -29,6 +29,8 @@ const item = document.querySelector('#item')
 const prior = document.querySelector('#prior')
 
 
+
+
 function addNew() {
     const html1 = `<input class="exp" type="text">`
     item.insertAdjacentHTML('beforeEnd', html1)
