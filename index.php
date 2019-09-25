@@ -1,6 +1,6 @@
 <?php
 session_start();
-$conn = mysqli_connect('localhost', 'root', '', 'hephbudget');
+include_once("db.php");
 if (!isset($_SESSION['user'])) {
     header("location: ./login.php");
 } else {

@@ -1,7 +1,6 @@
 <?php
 session_start();
-$conn = mysqli_connect('localhost', 'root', '', 'hephbudget');
-
+require("db.php");
 function clean_data($data)
 {
     return stripslashes(strip_tags(trim($_POST[$data])));
