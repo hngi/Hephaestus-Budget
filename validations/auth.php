@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $conn = mysqli_connect('localhost', 'root', '', 'hephbudget');
 
 function clean_data($data)
@@ -66,12 +66,13 @@ if (isset($_POST['login'])) {
     $email = clean_data('email');
     $pass = md5(clean_data('pass'));
     if (!empty($email) && !empty($pass)) {
-        $login_query = mysqli_query($conn, "SELECT `email`, `password` FROM registered_user WHERE `email` = '{$email}' AND `password` = '{$pass}' ");
+        $login_query = mysqli_query($conn, "SELECT `id`, `email`, `password` FROM registered_user WHERE `email` = '{$email}' AND `password` = '{$pass}' ");
         $count = mysqli_num_rows($login_query);
         if ($count == "0") {
             $msg = "Incorrect username or password";
         } else {
             $validated = true;
+            $_SESSION['user'] = mysqli_fetch_assoc($login_query)['id'];
             header("location: ./");
         }
     } else {

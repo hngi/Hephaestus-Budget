@@ -7,7 +7,6 @@ $item = "";
 $priority = 0;
 $amount = 0;
 
-
 //Define error messages
 $errors = "";
 $missingItem = "<span>fill in an item<span><br />";
@@ -49,4 +48,3 @@ if($errors){
     //code to update an item in the list will be written here
     
 }
-?>

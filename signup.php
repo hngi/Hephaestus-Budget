@@ -15,7 +15,7 @@
     <title>HephBudget | Sign up</title>
     <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500' rel='stylesheet' type='text/css'>
     <!-- uikit -->
-    <link rel="stylesheet" href="bower_components/uikit/css/uikit.almost-flat.min.css" />
+    <link rel="stylesheet" href="assets/css/uikit/css/uikit.almost-flat.min.css" />
     <!-- altair admin login page -->
     <link rel="stylesheet" href="assets/css/login_page.min.css" />
 </head>
