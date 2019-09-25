@@ -15,6 +15,6 @@ $database = substr($url["path"], 1);
 
 $conn = mysqli_connect("$host", "$username", "$password", $database);
 
-if($conn){
-    echo "connected";
-}
+// if($conn){
+//     echo "connected";
+// }
