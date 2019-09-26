@@ -64,31 +64,36 @@
 }
 
 .graph {
-    width: 544px;
+    /* width: 544px; */
     /* height: 213px; */
-    min-height: 213px;
-    height: auto;
+    width: auto;
+    height: 161px;
     background-color: white;
     box-shadow: 0px 0px 20px rgba(112, 112, 112, 0.32) 0px 0px 10px #E5E5E5;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     padding-left: 20px;
-    box-sizing: border-box
+    box-sizing: border-box;
+    font-size: 30px;
+    color: #4FA3A8;
 }
 
 .input {
     margin-right: 20px;
+    margin-bottom: 30px
 }
 
 .display {
     margin-left: 20px;
+    width: 544px;
 }
 
 .items {
     display: flex;
+    flex-direction: column
 }
 
 .items-container {
@@ -103,8 +108,11 @@
 
 .item {
     display: flex;
-    flex-direction: column;
     margin-left: 20px;
+}
+
+.pri {
+    margin-left: 145px
 }
 
 .exp {
@@ -113,6 +121,7 @@
     height: 36px;
     background-color: white;
     margin-bottom: 15px;
+    padding-left: 10px;
 }
 
 .in {
@@ -122,6 +131,7 @@
     border-radius: 5px;
     /* margin-bottom: 15px; */
     margin-bottom: 15px;
+    margin-left: 20px;
 }
 
 .amount {
@@ -129,6 +139,7 @@
     height: 36px;
     border: 1px solid #C4C4C4;
     border-radius: 5px;
+    padding-left: 10px;
 }
 
 
@@ -146,7 +157,8 @@ button {
 .breakdown {
     background-color: #4FA3A8;
     height: auto;
-    width: 544px;
+    /* width: 544px; */
+    width: auto;
     padding: 15px 40px 30px 20px;
     color: white;
     border-bottom-left-radius: 10px;
@@ -156,7 +168,7 @@ button {
 .back {
     background-color: #83C3D3;
     border-radius: 10px;
-    width: 368px;
+    width: 100%;
     height: 7px;
 }
 
@@ -167,9 +179,11 @@ button {
     border-radius: 10px;
 }
 
+
 .align {
     display: flex;
-    width: 368px;
+    /* width: 500px; */
+    width: 100%;
     justify-content: space-between;
     margin-bottom: -4px;
 }
@@ -185,14 +199,46 @@ button {
     /* margin-top: 10px; */
 }
 
-.prior {
-    display: flex;
-    justify-content: space-between
-}
-
 .del {
     color: red;
     width: 30px;
     height: 30px;
     margin-left: 5px;
+}
+
+@media only screen and (max-width: 1000px) {
+    /* .flex-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    } */
+
+    .display {
+        width: 400px
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .display {
+        width: 544px;
+    }
+
+    .input {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .display {
+        width: 360px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 }
