@@ -26,7 +26,6 @@ body {
     right: 0.17%;
     top: 0%;
     bottom: 0%;
-   
 }
 
 .top-right {
@@ -65,7 +64,7 @@ body {
 
 .path {
     position: absolute;
-    margin-top: 45%;
+    margin-top: 600px;
     width: 100%;
     height: 500px;
     z-index: -1;
@@ -74,7 +73,7 @@ body {
 /*form*/
 
 form {
-    margin-top:350PX;
+    margin-top: 300PX;
     width: 30%;
     margin-left: auto;
     margin-right: auto;
@@ -94,13 +93,19 @@ form input {
     box-sizing: border-box;
 }
 
+
+
 .Forgot-Password {
-    margin-left: 185px;
+    
+    text-align: end;
+    margin-right: 40px;
     font-size: 0.6em;
     margin-top: -10px;
     cursor: pointer;
 }
-
+.account{
+    font-size: 0.8em;
+}
 /* button */
 
 #logIn {
@@ -129,28 +134,42 @@ form input {
 
 .tracking {
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
-    grid-gap: 20px;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
     padding-left: 100px;
-    margin-top: 250px;
+    margin-top: 200px;
     color: #707070;
     font-family: 'Nunito', sans-serif;
+}
+
+.icons img {
+    width: 60%;
+}
+
+.text {
+    font-size: 80%;
 }
 
 /* Section 2 */
 
 .register-btn {
+    padding: 40px 0px;
     text-align: center;
     color: #707070;
     font-family: 'Nunito', sans-serif;
 }
 
 #Register {
+   
     background: #222222;
     opacity: 0.5;
     border-radius: 20px;
     width: 200px;
     height: 50px;
+    
+}
+
+#Register a{
+    text-decoration: none;
     color: white;
 }
 
@@ -176,61 +195,52 @@ form input {
 }
 
 /* media queires  */
-@media (width: 1346px) {
+
+@media (max-width: 1346px) {
     .tracking {
         margin-top: 200px;
     }
-  }
+}
 
-  
-@media (width: 1104px) {
-    .path{
-        margin-top: 54%;
+@media (max-width: 1159px) {
+    form {
+        margin-top: 300px;
     }
+}
+
+@media (max-width: 1104px) {
     .tracking {
         margin-top: 190px;
         padding-left: 20px;
     }
-  }
+}
 
-  @media (width: 768px) {
-    .path{
-        margin-top: 85%;
-    }
+@media (max-width: 855px) {
     .tracking {
-        margin-top: 180px;
+        margin-top: 300px;
         padding-left: 80px;
         padding-right: 30px;
     }
-
-    
-.Forgot-Password {
-    margin-left: 115px;
+    .Forgot-Password {
+        margin-left: 115px;
+    }
     
 }
-  }
 
-  @media (width: 375px) {
-    .path{
-        margin-top: 190%;
-        height: 400px;
-    }
 
+
+@media (max-width: 375px) {
     .tracking {
         display: block;
         margin-top: 250px;
         text-align: center;
-        padding-right:50px;
+        padding-right: 50px;
     }
-
     form {
-        margin-top:350PX;
+        margin-top: 350PX;
         width: 50%;
-        
     }
-    
-.Forgot-Password {
-    margin-left: 115px;
-    
+    .Forgot-Password {
+        margin-left: 115px;
+    }
 }
-  }
