@@ -68,6 +68,8 @@ if (isset($_POST['login'])) {
         $login_query = mysqli_query($conn, "SELECT `id`, `email`, `password` FROM registered_user WHERE `email` = '{$email}' AND `password` = '{$pass}' ");
         $count = mysqli_num_rows($login_query);
         if ($count == "0") {
+            $validated = false;
+            $color = "danger";
             $msg = "Incorrect username or password";
         } else {
             $validated = true;

@@ -8,8 +8,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" type="image/png" href="assets/img/favicon-16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="assets/img/favicon-32x32.png" sizes="32x32">
+    <!-- <link rel="icon" type="image/png" href="assets/img/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="assets/img/favicon-32x32.png" sizes="32x32"> -->
     <title>HephBudget <?php echo $title ?></title>
     <!-- uikit -->
     <link rel="stylesheet" href="assets/css/uikit/css/uikit.almost-flat.min.css" media="all">
@@ -34,3 +34,11 @@
         </div>
 
     </header>
+
+    <?php if (isset($fbk)) : ?>
+                <div class="md-card-content small-padding uk-text-center uk-alert uk-alert-<?php echo $fbk["color"]; ?>">
+                    <small>
+                        <?php echo $fbk["msg"]; ?>
+                    </small>
+                </div>
+            <?php endif; ?>
