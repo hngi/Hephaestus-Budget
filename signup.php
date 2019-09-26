@@ -1,72 +1,56 @@
 <?php include_once("./validations/auth.php") ?>
-<!doctype html>
-<!--[if lte IE 9]> <html class="lte-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!-->
+<!DOCTYPE html>
 <html lang="en">
-<!--<![endif]-->
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" type="image/png" href="assets/img/favicon-16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="assets/img/favicon-32x32.png" sizes="32x32">
-
-    <title>HephBudget | Sign up</title>
-    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500' rel='stylesheet' type='text/css'>
-    <!-- uikit -->
-    <link rel="stylesheet" href="assets/css/uikit/css/uikit.almost-flat.min.css" />
-    <!-- altair admin login page -->
-    <link rel="stylesheet" href="assets/css/login_page.min.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Hephbudget | Sign up</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
-<body class="login_page">
-    <div class="login_page_wrapper">
-        <div class="md-card" id="login_card">
-            <?php if (isset($fbk)) : ?>
-                <div class="md-card-content small-padding uk-text-center uk-alert uk-alert-<?php echo $fbk["color"]; ?>">
-                    <small> <?php echo $fbk["msg"]; ?></small>
-                </div>
-            <?php endif; ?>
-            <div class="md-card-content large-padding" id="register_form">
-                <h2 class="heading_a uk-margin-medium-bottom">Create an account</h2>
-                <form method="post">
-                    <div class="uk-form-row">
-                        <label for="register_username">Full name</label>
-                        <input class="md-input" type="text" id="register_username" name="name" value="<?php echo isset($name) ? $name : '' ?>" />
-                    </div>
-                    <div class="uk-form-row">
-                        <label for="register_email">E-mail</label>
-                        <input class="md-input" type="text" id="register_email" name="email" value="<?php echo isset($email) ? $email : '' ?>" />
-                    </div>
-                    <div class="uk-form-row">
-                        <label for="register_password">Password</label>
-                        <input class="md-input" type="password" id="register_password" name="pass" />
-                    </div>
-                    <div class="uk-form-row">
-                        <label for="register_password_repeat">Repeat Password</label>
-                        <input class="md-input" type="password" id="register_password_repeat" name="rpass" />
-                    </div>
+<body>
 
-                    <div class="uk-margin-medium-top">
-                        <button name="signup" class="md-btn md-btn-primary md-btn-block md-btn-large">Sign Up</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="uk-margin-top uk-text-center">
-            <a href="login.php">Login</a>
-        </div>
+    <div class="container">
+        <img class="position-fixed greenbg" src="assets/images/green.png" alt="" />
+        <img class="position-fixed whitebg" src="assets/images/white.png" alt="" />
     </div>
 
-    <!-- common functions -->
-    <script src="assets/js/common.min.js"></script>
-    <!-- uikit functions -->
-    <script src="assets/js/uikit_custom.min.js"></script>
-    <!-- altair core functions -->
-    <script src="assets/js/altair_admin_common.min.js"></script>
-    <!-- altair login page functions -->
-    <script src="assets/js/pages/login.min.js"></script>
+    <div class="d-flex position-absolute justify-content-center  align-items-center w-100 h-100">
+        <div class="col-md-5">
+            <form method="post" class="px-4 py-3 form">
+                <h5 class="text-center pb-2" style="color: #298b92;">Create an account</h5>
+                <?php if (isset($fbk)) : ?>
+                    <div class="alert alert-<?php echo $fbk["color"]; ?>">
+                        <small> <?php echo $fbk["msg"]; ?></small>
+                    </div>
+                <?php endif; ?>
+                <div class="form-group mb-4">
+                    <input name="name" type="text" placeholder="Full name " class="form-control" value="<?php echo isset($name) ? $name : '' ?>" />
+                </div>
+                <div class="form-group mb-4">
+                    <input name="email" type="email" placeholder="Email address " class="form-control" value="<?php echo isset($email) ? $email : '' ?>" />
+                </div>
+                <div class="form-group mb-4">
+                    <input name="pass" type="password" placeholder="Password " class="form-control" />
+                </div>
+                <div class="form-group mb-4">
+                    <input name="rpass" type="password" placeholder="Confirm password " class="form-control" />
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success" name="signup">Sign up</button>
+                </div>
+            </form>
+            <section class="mt-3 text-center">
+                <a href="login.php" class="btn-title">Login to your account</a>
+            </section>
+        </div>
+    </div>
+    <div class="footer">
+        &COPY; HephBudget 2019.
+    </div>
 </body>
 
 </html>

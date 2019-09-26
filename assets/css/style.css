@@ -4,7 +4,6 @@ body {
   padding: 0;
   overflow: auto;
   font-family: "Nunito", sans-serif;
-  position: relative;
 }
 
 .container {
@@ -13,147 +12,61 @@ body {
 }
 
 /*Background icon positioning */
-
-.top-left,
-.top-right {
+.greenbg,
+.whitebg {
   width: 100%;
-  height: 100vh;
   z-index: -1;
 }
 
-.top-left {
-  position: absolute;
-  left: 0.04%;
-  right: 0.17%;
+.greenbg {
   top: 0%;
   bottom: 0%;
 }
-
-.top-right {
-  position: absolute;
-  left: 0.04%;
-  right: 0.17%;
-  top: 26.03%;
-  bottom: 2.96%;
-  margin-top: 100px;
-}
-
-/* logo */
-
-.logo {
-  width: 7.5rem;
-  display: block;
-  margin: 0 auto;
-  padding-top: 20px;
-}
-
-/* center image */
-
-.girl {
-  width: 50%;
-  height: 500px;
-  margin-top: 90px;
-  position: absolute;
-  top: 27.13%;
-  left: 26%;
-  z-index: -1;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* path across */
-
-.path {
-  position: absolute;
-  margin-top: 45%;
-  width: 100%;
-  height: 500px;
-  z-index: -1;
+.whitebg {
+  top: 30%;
 }
 
 /*form*/
-
-form {
-  margin-top: 350px;
-  width: 30%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  padding: 20px 0px;
+.form {
+  margin: auto;
+  height: fit-content;
   background: #fff;
+  box-shadow: 1px 1px 10px #27262675;
   border: 1px solid white;
+  border-radius: 4px;
 }
-
-form input {
-  padding-left: 2em;
-  height: 5vh;
-  font-size: 87%;
-  margin-bottom: 1.5em;
-  width: 85%;
-  border: 1px solid #b7b3b3;
-  box-sizing: border-box;
-}
-
-.Forgot-Password {
-  margin-left: 185px;
-  font-size: 0.6em;
-  margin-top: -10px;
-  cursor: pointer;
-}
-
-/* button */
-
-#logIn {
-  padding-left: 2em;
-  height: 5vh;
-  font-size: 87%;
-  margin-bottom: 1.5em;
-  width: 85%;
-  border: 1px solid rgba(34, 157, 165, 0.63);
-  background: rgba(34, 157, 165, 0.63);
-  box-sizing: border-box;
-  margin-top: 30px;
-  color: white;
-}
-
-.redText {
-  text-decoration: none;
-  padding-bottom: 60px;
-}
-
-.redText:hover {
-  color: red;
-}
-
-/* Budget and Expense Tracking */
-
-.tracking {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto;
-  grid-gap: 20px;
-  padding-left: 100px;
-  margin-top: 250px;
-  color: #707070;
-  font-family: "Nunito", sans-serif;
-}
-
 /* Section 2 */
-
-.register-btn {
-  text-align: center;
-  color: #707070;
-  font-family: "Nunito", sans-serif;
-}
-
-#Register {
-  background: #222222;
-  opacity: 0.5;
-  border-radius: 20px;
+.btn-title {
+  background: #298b92;
+  border-radius: 100px;
   width: 200px;
-  height: 50px;
+  padding: 15px 0px;
+  color: ghostwhite;
+  display: inline-block;
   color: white;
+  border: none;
+  outline: none;
+  box-shadow: 0px 3px 3px #0e5358;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+}
+a.btn-title:hover {
+  background: ghostwhite;
+  width: 200px;
+  padding: 15px 0px;
+  color: #298b92;
+  box-shadow: 0px 3px 3px #298b92;
 }
 
+.footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+  color: #298b92;
+  font-weight: bold;
+  font-size: 14px;
+}
 /* navbar */
 
 .navbar {
@@ -166,6 +79,7 @@ form input {
   display: flex;
   justify-content: center;
   padding: 20px;
+  
 }
 
 .nav-links {
@@ -173,59 +87,4 @@ form input {
   color: #707070;
   padding-right: 20px;
   font-family: "Nunito", sans-serif;
-}
-
-/* media queires  */
-@media (width: 1346px) {
-  .tracking {
-    margin-top: 200px;
-  }
-}
-
-@media (width: 1104px) {
-  .path {
-    margin-top: 54%;
-  }
-  .tracking {
-    margin-top: 190px;
-    padding-left: 20px;
-  }
-}
-
-@media (width: 768px) {
-  .path {
-    margin-top: 85%;
-  }
-  .tracking {
-    margin-top: 180px;
-    padding-left: 80px;
-    padding-right: 30px;
-  }
-
-  .Forgot-Password {
-    margin-left: 115px;
-  }
-}
-
-@media (width: 375px) {
-  .path {
-    margin-top: 190%;
-    height: 400px;
-  }
-
-  .tracking {
-    display: block;
-    margin-top: 250px;
-    text-align: center;
-    padding-right: 50px;
-  }
-
-  form {
-    margin-top: 350px;
-    width: 50%;
-  }
-
-  .Forgot-Password {
-    margin-left: 115px;
-  }
 }
