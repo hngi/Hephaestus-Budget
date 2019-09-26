@@ -98,6 +98,7 @@ function showBreakdown() {
             low.push(cur)
         }
     })
+    console.log(low)
 
     let percentages = []
 
@@ -114,7 +115,7 @@ function showBreakdown() {
             v = c * total
         }
         else {
-            t = 20 / medium.length + '%'
+            t = 20 / low.length + '%'
             c = (20 / (low.length * 100))
             v = c * total
         }
@@ -139,9 +140,6 @@ function showBreakdown() {
         cur.style.width = `${percentages[i] * back.offsetWidth}px`
         cur.style.backgroundColor = `${color}`
     })
-    console.log(back)
-    console.log(back.offsetWidth)
-    console.log(percentages)
 }
 
 function populate() {
@@ -172,3 +170,5 @@ function populate() {
 add.addEventListener('click', addNew)
 items.addEventListener('click', del)
 cal.addEventListener('click', populate)
+
+
