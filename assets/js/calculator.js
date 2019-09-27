@@ -24,9 +24,7 @@ function listIdGenerator() {
     return id
 }
 
-var list = [
-    { id: 0 },
-]
+var list = []
 
 const amount = document.querySelector('.amount');
 const add = document.querySelector('.add-icon');
@@ -98,26 +96,25 @@ function showBreakdown() {
             low.push(cur)
         }
     })
-    console.log(low)
 
     let percentages = []
 
     const html = data.map(cur => {
         let t, v, c
         if (cur.priority === 'Top') {
-            t = 50 / top.length + '%'
+            t = (Math.floor((50 / top.length) * 100)) / 100 + '%'
             c = (50 / (top.length * 100))
-            v = c * total
+            v = (Math.floor((c * total) * 100)) / 100
         }
         else if (cur.priority === 'Medium') {
-            t = 30 / medium.length + '%'
+            t = (Math.floor((30 / medium.length) * 100)) / 100 + '%'
             c = (30 / (medium.length * 100))
-            v = c * total
+            v = (Math.floor((c * total) * 100)) / 100
         }
         else {
-            t = 20 / low.length + '%'
+            t = (Math.floor((20 / low.length) * 100)) / 100 + '%'
             c = (20 / (low.length * 100))
-            v = c * total
+            v = (Math.floor((c * total) * 100)) / 100
         }
         percentages.push(c)
         return `<div class="align">
@@ -149,19 +146,29 @@ function populate() {
         alert('Please put an amount')
         return
     }
+    if (total <= 0) {
+        alert('Please put a positive amount')
+        return
+    }
     const exp = Array.from(document.querySelectorAll('.exp'))
     const inc = Array.from(document.querySelectorAll('.in'))
-    exp.forEach((cur, i) => {
-        const dat = {
-            item: cur.value,
-            id: cur.parentNode.id,
-        }
-        data[i] = dat
-    })
+    try {
+        exp.forEach((cur, i) => {
+            if(!cur.value) {
+                throw alert('please put an item')
+            }
+            const dat = {
+                item: cur.value,
+                id: cur.parentNode.id,
+            }
+            data[i] = dat
+        })
+    } catch(e) {
+        console.log(e)
+    }
     inc.forEach((cur, i) => {
         data[i].priority = cur.value
     })
-    console.log(data)
     showBreakdown()
 }
 
