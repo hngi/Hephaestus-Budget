@@ -43,7 +43,7 @@ function addNew() {
     const i = listIdGenerator()
     const html = `<div class="item" id=${i}>
     <!-- <p>Priority</p> -->
-    <input class="exp" type="text">
+    <input class="exp form-control mr-3" type="text">
     <select class="in">
         <option>Top</option>
         <option>Medium</option>
@@ -114,10 +114,11 @@ function showBreakdown() {
             v = c * total
         }
         else {
-            t = 20 / medium.length + '%'
+            t = 20 / low.length + '%'
             c = (20 / (low.length * 100))
             v = c * total
         }
+        console.log(t)
         percentages.push(c)
         return `<div class="align">
         <p>${cur.item}</p>
@@ -127,7 +128,7 @@ function showBreakdown() {
     <div class="back">
         <div class="color"></div>
     </div>`
-    }).join('')
+    }).join('');
     breakdown.innerHTML = html
     const back = document.querySelector('.back')
     const level = Array.from(document.querySelectorAll('.color'))
@@ -151,23 +152,26 @@ function populate() {
         alert('Please put an amount')
         return
     }
+
     const exp = Array.from(document.querySelectorAll('.exp'))
     const inc = Array.from(document.querySelectorAll('.in'))
     exp.forEach((cur, i) => {
-        const dat = {
-            item: cur.value,
-            id: cur.parentNode.id,
+        if (cur.value == "") {
+            alert("Enter name of item");
+        } else {
+            const dat = {
+                item: cur.value,
+                id: cur.parentNode.id,
+            }
+            data[i] = dat
         }
-        data[i] = dat
     })
     inc.forEach((cur, i) => {
         data[i].priority = cur.value
     })
-    console.log(data)
+    console.log(data)        
     showBreakdown()
 }
-
-
 
 add.addEventListener('click', addNew)
 items.addEventListener('click', del)
