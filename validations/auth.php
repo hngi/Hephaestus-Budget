@@ -53,7 +53,7 @@ if (isset($_POST['signup'])) {
                 $msg = "An error was encountered on registration";
             }
         }
-    } else { 
+    } else {
         $validated = false;
         $msg = "All fields are required";
         $color = "warning";
