@@ -24,44 +24,60 @@
         <header id="header" class="header">
             <nav class="nav-class" id="nav-bar">
                 <ul class="nav-items">
-                    <li class="nav-links">
+                    <li class="nav-links " style="border: 0">
                         <div class="nav-div"> <img src="assets/images/Logo.png" id="header-img" alt="logo" height="80px"
                                 width="90px" class="logo-class"></div>
                     </li>
-                    <li class="nav-links">
+                    <li class="nav-links hide">
                         <a href="#quality" class="nav-link">
                             Home
                         </a>
-
                     </li>
-                    <li class="nav-links">
+                    <li class="nav-links hide">
                         <a href="#video" class="nav-link">
                             About
                         </a>
                     </li>
-                    <li class="nav-links">
+                    <li class="nav-links hide">
                         <a href="#cto" class="nav-link">
                             Calculator
                         </a>
                     </li>
-                    <li class="nav-links">
+                    <li class="nav-links hide">
                         <a href="#cto" class="nav-link">
                             Contact
                         </a>
                     </li>
-                    <li class="nav-links">
+                    <li class="nav-links hide">
                         <a href="#cto" class="nav-link">
                             Login
                         </a>
                     </li>
-                    <li class="nav-links">
+                    <li class="nav-links hide">
                         <a href="#cto" class="nav-link">
                             Sign up
-
                         </a>
                     </li>
                 </ul>
             </nav>
+
+            <div class="button_container" id="toggle">
+                <span class="top"></span>
+                <span class="middle"></span>
+                <span class="bottom"></span>
+            </div>
+
+            <div class="overlay" id="overlay">
+                <nav class="overlay-menu">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Calculator</a></li>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
 
         <div class="content">
@@ -124,17 +140,24 @@
                 <ul class="footer-ul second">
                     <li class="footer-list">Budget App, <br> No 1 Hephaestus, Slack Avenue</li>
                     <li class="footer-list">info@budgetApp.com</li>
+
+                    <li class="footer-list"> <img src="assets/images/twi.png" alt="footer-logo" /> <img
+                            src="assets/images/ig.png" alt="footer-logo" /> <img src="assets/images/fb.png"
+                            alt="footer-logo" /> <img src="assets/images/in.png" alt="footer-logo" /></a></li>
                     <li class="footer-list"> © 2019 Heph-Budget</li>
-                    <li class="footer-list"> <img src="assets/images/twi.png" alt="footer-logo" /></a></li>
-                    <li class="footer-list"><img src="assets/images/fb.png" alt="footer-logo" /></a></li>
-                    <li class="footer-list"> <img src="assets/images/in.png" alt="footer-logo" /></a></li>
-                    <li class="footer-list"> <img src="assets/images/ig.png" alt="footer-logo" /></a></li>
                 </ul>
             </footer>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-    <script src="" async defer></script>
+    <script>
+        $('#toggle').click(function () {
+            $(this).toggleClass('active');
+            $('#overlay').toggleClass('open');
+        });
+    </script>
 </body>
 
 </html>
