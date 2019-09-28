@@ -33,6 +33,24 @@
                 <input class="amount" type="number">
             </div>
             <div class="items-container">
+                <div>
+                    <p class="allocating">Allocate percentages for each priority</p>
+                    <div class="all">
+                        <div class="alloc">
+                            <p>High</p>
+                            <input class="first" type="number">
+                        </div>
+                        <div class="alloc">
+                            <p>Medium</p>
+                            <input class="first" type="number">
+                        </div>
+                        <div class="alloc">
+                            <p>Low</p>
+                            <input class="first" type="number">
+                        </div>
+                    </div>
+
+                </div>
                 <div class="items">
                     <div class="item" id="item">
                         <p>Item</p>
@@ -51,7 +69,7 @@
                 <div class="icon">
                     <ion-icon class="add-icon" name="add-circle"></ion-icon>
                 </div>
-                <div class="calc"> 
+                <div class="calc">
                     <button id="clear">Clear All</button>
                     <button id="cal">Calculate</button>
                 </div>
@@ -68,13 +86,11 @@
                 </div>
                 <div class="remaining">Remaining budget: <span class="span"></span></div>
             </div>
-            
-
         </div>
     </div>
 
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-    
+
     <script type="text/javascript" src="assets/js/calculator.js"></script>
 </body>
 

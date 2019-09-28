@@ -39,6 +39,7 @@ const showAmount = document.querySelector('.amount-showing')
 const clearAll = document.querySelector('#clear')
 const remaining = document.querySelector('.remaining')
 const span = document.querySelector('.span')
+const first = document.querySelectorAll('.first')
 
 
 
@@ -48,7 +49,7 @@ function addNew() {
     <!-- <p>Priority</p> -->
     <input class="exp" type="text">
     <select class="in">
-        <option>Top</option>
+        <option>High</option>
         <option>Medium</option>
         <option>Low</option>
     </select>
@@ -100,7 +101,7 @@ function showBreakdown() {
     let medium = []
     let low = []
     data.forEach(cur => {
-        if (cur.priority === 'Top') {
+        if (cur.priority === 'High') {
             top.push(cur)
         }
         else if (cur.priority === 'Medium') {
@@ -112,22 +113,36 @@ function showBreakdown() {
     })
 
     let percentages = []
+    let percValue = []
+
+    first.forEach(cur => {
+        percValue.push(+(cur.value))
+    })
+
+    const newValues = percValue.map(cur => {
+        let sum = 0;
+        percValue.forEach(cur => {
+            sum += cur
+        })
+        newVal = (cur / sum) * 100
+        return newVal
+    })  
 
     const html = data.map(cur => {
         let t, v, c
-        if (cur.priority === 'Top') {
-            t = (Math.floor((50 / top.length) * 100)) / 100 + '%'
-            c = (50 / (top.length * 100))
+        if (cur.priority === 'High') {
+            t = (Math.floor((newValues[0] / top.length) * 100)) / 100 + '%'
+            c = (newValues[0] / (top.length * 100))
             v = (Math.floor((c * total) * 100)) / 100
         }
         else if (cur.priority === 'Medium') {
-            t = (Math.floor((30 / medium.length) * 100)) / 100 + '%'
-            c = (30 / (medium.length * 100))
+            t = (Math.floor((newValues[1] / medium.length) * 100)) / 100 + '%'
+            c = (newValues[1] / (medium.length * 100))
             v = (Math.floor((c * total) * 100)) / 100
         }
         else {
-            t = (Math.floor((20 / low.length) * 100)) / 100 + '%'
-            c = (20 / (low.length * 100))
+            t = (Math.floor((newValues[2] / low.length) * 100)) / 100 + '%'
+            c = (newValues[2] / (low.length * 100))
             v = (Math.floor((c * total) * 100)) / 100
         }
         used += v
@@ -167,6 +182,7 @@ function populate() {
         alert('Please put a positive amount')
         return
     }
+    
     const exp = Array.from(document.querySelectorAll('.exp'))
     const inc = Array.from(document.querySelectorAll('.in'))
     try {
@@ -186,7 +202,17 @@ function populate() {
     inc.forEach((cur, i) => {
         data[i].priority = cur.value
     })
-    showBreakdown()
+    try {
+        first.forEach(cur => {
+            if(!cur.value) {
+                throw alert('please allocate a percentage for priorities')
+            }
+        })
+        showBreakdown()
+    } catch(e) {
+        console.log(e)
+    }
+    //showBreakdown()
     remaining.style.display = 'block'
     span.textContent = `${total - used}`
 }
