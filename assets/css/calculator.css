@@ -103,7 +103,8 @@
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     position: relative;
-    padding-bottom: 20px
+    padding-bottom: 20px;
+    padding-top: 10px
 }
 
 .item {
@@ -217,6 +218,28 @@ button {
 .remaining {
     margin-top: 20px;
     display: none
+}
+
+.allocating {
+    margin-left: 20px;
+    width: 80%
+}
+
+.all {
+    margin-top: -15px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+.alloc {
+    margin-right: 60px;
+}
+
+.first {
+    width: 40px;
+    height: auto
 }
 
 @media only screen and (max-width: 1000px) {
