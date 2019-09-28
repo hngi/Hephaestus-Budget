@@ -249,6 +249,9 @@ div#toggle.button_container {
     visibility: hidden;
 }
 
+.footer-ul img {
+    margin: 2%;
+}
 
 /* 
 responsive styles */
@@ -277,6 +280,19 @@ responsive styles */
     .features-row {
         flex-wrap: wrap;
     }
+
+    .footer-ul {
+        font-size: 16px;
+    }
+
+    .footer-ul.second {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    li.footer-list {
+        text-align: center;
+    }
 }
 
 /* nav style */
@@ -285,7 +301,7 @@ responsive styles */
 .containers {
     position: absolute;
     width: 100%;
-    heigh: 100%;
+    height: 100%;
     text-align: center;
     top: 40%;
     left: 0;
