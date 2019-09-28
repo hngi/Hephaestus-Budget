@@ -1,6 +1,7 @@
 let total;
 
-var data = []
+let data = []
+let used = 0
 
 function idGenerator() {
     let id
@@ -35,11 +36,15 @@ const calc = document.querySelector('#cal')
 const exp = document.querySelector('.exp')
 const breakdown = document.querySelector('#breakdown')
 const showAmount = document.querySelector('.amount-showing')
+const clearAll = document.querySelector('#clear')
+const remaining = document.querySelector('.remaining')
+const span = document.querySelector('.span')
+
 
 
 function addNew() {
     const i = listIdGenerator()
-    const html = `<div class="item" id=${i}>
+    const html = `<div class="item rem" id=${i}>
     <!-- <p>Priority</p> -->
     <input class="exp" type="text">
     <select class="in">
@@ -71,6 +76,15 @@ function del(e) {
         remove(parentId)
     }
 }
+
+function removeAll() {
+    const item = Array.from(document.querySelectorAll('.rem'))
+    item.forEach(cur => {
+        const parent = cur.parentNode
+        parent.removeChild(cur)
+    })
+}
+
 
 function getRandomColor() {
     var letters = '0123456789ABCDEF';
@@ -116,6 +130,7 @@ function showBreakdown() {
             c = (20 / (low.length * 100))
             v = (Math.floor((c * total) * 100)) / 100
         }
+        used += v
         percentages.push(c)
         return `<div class="align">
         <p>${cur.item}</p>
@@ -140,6 +155,8 @@ function showBreakdown() {
 }
 
 function populate() {
+    used = 0
+    data = []
     total = amount.value
     showAmount.textContent = `₦${total}`
     if (!total) {
@@ -170,6 +187,8 @@ function populate() {
         data[i].priority = cur.value
     })
     showBreakdown()
+    remaining.style.display = 'block'
+    span.textContent = `${total - used}`
 }
 
 
@@ -177,5 +196,6 @@ function populate() {
 add.addEventListener('click', addNew)
 items.addEventListener('click', del)
 cal.addEventListener('click', populate)
+clearAll.addEventListener('click', removeAll)
 
 
