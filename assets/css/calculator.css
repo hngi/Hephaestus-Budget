@@ -145,13 +145,21 @@
 
 button {
     margin-top: 60px;
-    margin-left: 95.5px;
+    /* margin-left: 95.5px; */
     width: 149px;
     height: 44px;
     background-color: #FE5F55;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     color: white;
+}
+
+#clear {
+    margin-left: 15px;
+}
+
+#cal {
+    margin-left: 10px;
 }
 
 .breakdown {
@@ -206,6 +214,11 @@ button {
     margin-left: 5px;
 }
 
+.remaining {
+    margin-top: 20px;
+    display: none
+}
+
 @media only screen and (max-width: 1000px) {
     /* .flex-container {
         display: flex;
@@ -242,3 +255,5 @@ button {
         margin-right: 10px;
     }
 }
+
+
