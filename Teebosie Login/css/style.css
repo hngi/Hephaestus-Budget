@@ -1,21 +1,37 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
-body {
+* {
     margin: 0;
     padding: 0;
-    overflow: auto;
+    /* overflow: auto; */
+    box-sizing:border-box;
     font-family: 'Nunito', sans-serif;
-    position: relative;
-    background-color: #00c8aa;
+    /* position: relative; */
+    /* background-color: #00c8aa; */
 }
 
-.container {
-    margin: 0;
-    padding: 0;
+#forForm{
+    background-image: url('https://res.cloudinary.com/michelletakuro/image/upload/v1569348797/auth-bg.png');
+    background-size: cover;
+    height: 100vh;
+    margin-bottom: 120px;
+}
+.navbar{
+    background-color: #00c8aa ;
+    width: 100vw !important;
+}
+#navbarText .navbar-nav .nav-link{
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.body{
+    
 }
 
 /*Background icon positioning */
 
-.top-left, .top-right {
+/* .top-left, .top-right {
     width: 100%;
     height: 100vh;
     z-index: -1;
@@ -36,20 +52,20 @@ body {
     top: 26.03%;
     bottom: 2.96%;
     margin-top: 100px;
-}
+} */
 
 /* logo */
 
-.logo {
+/* .logo {
     width: 7.5rem;
     display: block;
     margin: 0 auto;
     padding-top: 20px;
-}
+} */
 
 /* center image */
 
-.girl {
+/* .girl {
     width: 50%;
     height: 500px;
     margin-top: 90px;
@@ -63,17 +79,17 @@ body {
 
 /* path across */
 
-.path {
+/* .path {
     position: absolute;
     margin-top: 600px;
     width: 100%;
     height: 500px;
     z-index: -1;
-}
+} */ 
 
 /*form*/
 
-form {
+/* form {
     margin-top: 300PX;
     width: 30%;
     margin-left: auto;
@@ -82,16 +98,16 @@ form {
     padding: 20px 0px;
     background: #fff;
     border: 1px solid white;
-}
+} */
 
-form input {
+
+ form input {
     padding-left: 2em;
     height: 5vh;
     font-size: 87%;
     margin-bottom: 1.5em;
     width: 85%;
     border: 1px solid #B7B3B3;
-    box-sizing: border-box;
 }
 
 
@@ -106,7 +122,7 @@ form input {
 }
 .account{
     font-size: 0.8em;
-}
+} 
 /* button */
 
 #logIn {
@@ -115,8 +131,8 @@ form input {
     font-size: 87%;
     margin-bottom: 1.5em;
     width: 85%;
-    border: 1px solid rgba(34, 157, 165, 0.63);
-    background: rgba(34, 157, 165, 0.63);
+    /* border: 1px solid rgba(34, 157, 165, 0.63);
+    background: rgba(34, 157, 165, 0.63); */
     box-sizing: border-box;
     margin-top: 30px;
     color: white;
@@ -129,11 +145,11 @@ form input {
 
 .redText:hover {
     color: red;
-}
+} 
 
 /* Budget and Expense Tracking */
 
-.tracking {
+/* .tracking {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
     padding-left: 100px;
@@ -149,10 +165,10 @@ form input {
 .text {
     font-size: 80%;
 }
-
+ */
 /* Section 2 */
 
-.register-btn {
+/* .register-btn {
     padding: 40px 0px;
     text-align: center;
     color: #707070;
@@ -172,16 +188,16 @@ form input {
 #Register a{
     text-decoration: none;
     color: white;
-}
+} */
 
 /* navbar */
 
-.navbar {
+/* .navbar {
     font-size: 18px;
     padding-bottom: 10px;
-}
+} */
 
-.main-nav {
+/* .main-nav {
     list-style-type: none;
     display: flex;
     justify-content: center;
@@ -194,10 +210,10 @@ form input {
     padding-right: 20px;
     font-family: 'Nunito', sans-serif;
 }
-
+ */
 /* media queires  */
 
-@media (max-width: 1346px) {
+/* @media (max-width: 1346px) {
     .tracking {
         margin-top: 200px;
     }
@@ -227,10 +243,10 @@ form input {
     }
     
 }
+ */
 
 
-
-@media (max-width: 375px) {
+/* @media (max-width: 375px) {
     .tracking {
         display: block;
         margin-top: 250px;
@@ -244,4 +260,44 @@ form input {
     .Forgot-Password {
         margin-left: 115px;
     }
+} */
+.welcome{
+    grid-area:welcome;
+}
+.input{
+    grid-area: input;
+}
+.password{
+    grid-area:password;
+}
+.forgotP{
+    gird-area: forgotP;
+}
+.btn{
+    grid-area: btn;
+}
+.account{
+    grid-area: account;
+}
+
+@media screen and (max-width: 768px){
+#forForm{
+    width: 80%;
+    max-height: 100vh;
+    margin-bottom: 250px;
+    
+}
+ #forForm{
+    background: #00c8aa;
+    background-position: 60% 20% 50% 70%;
+    background-repeat: no-repeat;
+}
+ 
+ 
+}
+@media (min-width: 998px){
+    #formBody{
+        width: 70%;
+        margin-left: 150px;
+}
 }

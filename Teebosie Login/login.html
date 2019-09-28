@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" >
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -12,51 +12,71 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-    <div class="container">
+<body class="body">
+    <!-- navbar -->
+    <div class="container-fluid">
         <div class="row">
-            <div class="container">
-                <img class="top-left" src="img/green.png" alt="">
-                <img class="top-right" src="img/white.png" alt="">
-                <img class="logo" src="img/Logo.png" alt="">
-                <img class="path" src="img/Path 115.png" alt="">
-                <img class="girl" src="img/image (4).png" alt="">
-            
-            
+        <nav class="navbar navbar-expand-md navbar-light ">
+            <a class="navbar-brand" href="#"><img src="https://res.cloudinary.com/michelletakuro/image/upload/v1569348798/web-logo.png" alt="logo" width="80px"
+                class="img-fluid"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse mx-6" id="navbarText">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="signup.html">Sign-Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                </ul>
+                <span class="navbar-text">
+                    
+                </span>
             </div>
-            <div class="container">
-                <div class="row">
-                    <form action="#" class="col-md-6 offset-md-3">
+        </nav>
+        </div>
+    </div><br/>
+    
             
-                        <div>
-                            <h5>Welcome, login to begin your Budget/Expenses.</h5>
+    <div class="container" id="forForm">
+            <div class="card py-5 " id="formBody">
+                <div class="card-body px-5 py-5" >
+                    <form action="#" class="col-md-6 offset-lg-3 py-4 px-3" id="formGrid">
+                    
+                        <div class="welcome">
+                            <h5>Welcome, Login to start your Budget/Expenses calculation.</h5>
                         </div>
-                        <div>
-                            <input id="username" name="username" type="text" placeholder="Username ">
+                        <div class="input">
+                            <input id="username" name="username" type="text" placeholder="Username"  required>
                         </div>
-            
-                        <div>
+                    
+                        <div class="password">
                             <input id="Password" name="Password Field" type="text" class="field text fn" value="" tabindex="1"
-                                placeholder="Password">
-            
+                                placeholder="Password"  required>
+                    
                         </div>
-                        <div>
+                        <div class="forgotP">
                             <p class="Forgot-Password"><a href="password.html">Forgot Password</a></p>
                         </div>
-                        <button id="logIn">Sign In</button>
+                        <button id="logIn" class="btn btn-danger">Sign In</button>
                         <p class="account">Don't have an account?<strong><a href="signup.html" class="redText">
                                     Signup</a></strong>
                         </p>
-            
-            
+                    
+                    
                     </form>
                 </div>
             </div>
-            
-            
-            
-            
-            
+    </div><br/>
+         
+    <div class="container">
+        <div class="row">
             <!-- section1 -->
             <section class="tracking">
                 <div class="text">
@@ -79,15 +99,18 @@
                 <div class="icons">
                     <img src="img/pie-chart-1.png" alt="">
                 </div>
+        </div>
+    </div>    
             
-            </section>
+            
+            
             <!-- section2 -->
             <section class=register-btn>
                 <p>Try the Budget App for <strong>FREE</strong> Now</p>
                 <button id="Register"><a href="#">Register for FREE</a></button>
             </section>
             
-            <nav class="navbar">
+           <!--  <nav class="navbar">
             
             
                 <ul class="main-nav" id="">
@@ -112,12 +135,18 @@
                     <img src="img/Logo.png" alt="" width="50px;">
                 </ul>
             
-            </nav>
-        </div>
-    </div>
+            </nav> -->
     
-   
-
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+<!-- <script src="login.js"></script> -->
 </body>
 
 
