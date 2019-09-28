@@ -5,6 +5,7 @@ body {
     overflow: auto;
     font-family: 'Nunito', sans-serif;
     position: relative;
+    background-color: #00c8aa;
 }
 
 .container {
