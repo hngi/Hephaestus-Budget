@@ -52,7 +52,7 @@ if (isset($_SESSION['user'])) {
   </div>
   <section id="hephbot" class="bg-dark text-center text-light pt-3 pb-0">
     <p class="m-0 h4">Download HephBudget ChatBot for android</p>
-    <img src="assets/images/playstore.png" height="70" />
+    <a style="cursor:pointer" href="https://github.com/hngi/Hephaestus-Chatbot/blob/updatedbot/app/build/outputs/apk/debug/app-debug.apk"> <img src="assets/images/playstore.png" height="70" /> </a>
   </section>
 
   <p class="m-0 mt-5 font-weight-bold text-center" style="color: #298b92;"> &copy; HephBudget 2019.</p>
