@@ -74,7 +74,7 @@ if (isset($_POST['login'])) {
         } else {
             $validated = true;
             $_SESSION['user'] = mysqli_fetch_assoc($login_query)['id'];
-            header("location: ./");
+            header("location: home.php");
         }
     } else {
         $validated = false;
@@ -82,4 +82,35 @@ if (isset($_POST['login'])) {
         $color = "warning";
     }
     $fbk = ["valitated" => $validated, "msg" => $msg, "color" => $color];
+}
+
+if (isset($_POST['reset_password'])) {
+    $email = clean_data('email');
+    $pass = md5(clean_data('pass'));
+    $rpass = md5(clean_data('rpass'));
+    if (!empty($email) && !empty($pass) && !empty($rpass)) {
+        $validated = true;
+        if (strlen($pass) < 4 || strlen($rpass) < 4) {
+            $validated = false;
+            $msg = "Password must be minimum 4 characters";
+            $color = "warning";
+        }
+
+        if ($pass !== $rpass) {
+            $validated = false;
+            $msg = "Passwords do not match";
+            $color = "warning";
+        }
+
+        if ($validated !== false) {
+            $reset_query = mysqli_query($conn, "UPDATE registered_user SET `password` =  '{$pass}'  WHERE `email` = '{$email}'");
+            if ($reset_query == true) {
+                $msg = "Your password reset was successful, you can login to your account";
+                $color = "success";
+            } else {
+                $msg = "An error was encountered on registration";
+            }
+        }
+        $fbk = ["msg" => $msg, "color" => $color];
+    }
 }

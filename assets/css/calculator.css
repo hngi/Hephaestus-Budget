@@ -4,13 +4,11 @@
 
 .head {
   background-color: #4fa3a8;
-  z-index: 5;;
+  z-index: 5;
 }
-.head > p {
-  color: whitesmoke;
-  font-size: 20px;
-  text-shadow: 1px 1px 1px #073d40, 2px 2px 2px #084144, 3px 3px 3px #052b2d,
-    4px 4px 4px #104f52, 5px 5px 5px #0c4346, 6px 6px 6px #1bbcc5;
+.hephbrand {
+  text-shadow: 0 1px 1px #bbb, 0 2px 0 #999, 0 3px 0 #888, 0 4px 0 #777,
+    0 5px 0 #666, 0 6px 0 #555, 0 7px 0 #444, 0 8px 0 #333, 0 9px 7px #302314;
 }
 .sack {
   position: relative;
@@ -45,7 +43,7 @@
 
 .graph {
   height: 100px;
-  background-color: #ddd;
+  background-color: whitesmoke;
   box-shadow: 0px 0px 20px rgba(112, 112, 112, 0.32) 0px 0px 10px #e5e5e5;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -74,6 +72,17 @@
   border-bottom-right-radius: 10px;
   position: relative;
   width: 100%;
+}
+
+.all {
+  margin-top: -15px;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+
+.first {
+  height: auto;
 }
 
 .item {
@@ -136,6 +145,7 @@
   width: 100%;
   justify-content: space-between;
   margin-bottom: -4px;
+  padding-top: 15px;
 }
 
 .add-icon {
@@ -150,13 +160,14 @@
   height: 30px;
   margin-left: 5px;
 }
-.footer{
-  bottom: 0;
-  position: absolute;
+.remaining {
+  margin-top: 20px;
+}
+.footer {
   color: #4fa3a8;
 }
-@media screen and (max-width: 768px){
-  .footer{
+@media screen and (max-width: 768px) {
+  .footer {
     position: relative;
     margin-top: 50px;
   }

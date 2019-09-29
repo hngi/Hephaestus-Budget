@@ -1,6 +1,7 @@
 let total;
 
-var data = []
+let data = []
+let used = 0
 
 function idGenerator() {
     let id
@@ -24,9 +25,7 @@ function listIdGenerator() {
     return id
 }
 
-var list = [
-    { id: 0 },
-]
+var list = []
 
 const amount = document.querySelector('.amount');
 const add = document.querySelector('.add-icon');
@@ -37,15 +36,20 @@ const calc = document.querySelector('#cal')
 const exp = document.querySelector('.exp')
 const breakdown = document.querySelector('#breakdown')
 const showAmount = document.querySelector('.amount-showing')
+const clearAll = document.querySelector('#clear')
+const remaining = document.querySelector('.remaining')
+const span = document.querySelector('.span')
+const first = document.querySelectorAll('.first')
+
 
 
 function addNew() {
     const i = listIdGenerator()
-    const html = `<div class="item" id=${i}>
+    const html = `<div class="item rem" id=${i}>
     <!-- <p>Priority</p> -->
     <input class="exp form-control mr-3" type="text">
     <select class="in">
-        <option>Top</option>
+        <option>High</option>
         <option>Medium</option>
         <option>Low</option>
     </select>
@@ -74,6 +78,17 @@ function del(e) {
     }
 }
 
+function removeAll() {
+    const item = Array.from(document.querySelectorAll('.rem'))
+    item.forEach(cur => {
+        const parent = cur.parentNode
+        parent.removeChild(cur)
+    });
+    breakdown.innerHTML = "";
+    span.innerHTML = "";
+}
+
+
 function getRandomColor() {
     var letters = '0123456789ABCDEF';
     var color = '#';
@@ -88,7 +103,7 @@ function showBreakdown() {
     let medium = []
     let low = []
     data.forEach(cur => {
-        if (cur.priority === 'Top') {
+        if (cur.priority === 'High') {
             top.push(cur)
         }
         else if (cur.priority === 'Medium') {
@@ -100,35 +115,49 @@ function showBreakdown() {
     })
 
     let percentages = []
+    let percValue = []
+
+    first.forEach(cur => {
+        percValue.push(+(cur.value))
+    })
+
+    const newValues = percValue.map(cur => {
+        let sum = 0;
+        percValue.forEach(cur => {
+            sum += cur
+        })
+        newVal = (cur / sum) * 100
+        return newVal
+    })
 
     const html = data.map(cur => {
         let t, v, c
-        if (cur.priority === 'Top') {
-            t = 50 / top.length + '%'
-            c = (50 / (top.length * 100))
-            v = c * total
+        if (cur.priority === 'High') {
+            t = (Math.floor((newValues[0] / top.length) * 100)) / 100 + '%'
+            c = (newValues[0] / (top.length * 100))
+            v = (Math.floor((c * total) * 100)) / 100
         }
         else if (cur.priority === 'Medium') {
-            t = 30 / medium.length + '%'
-            c = (30 / (medium.length * 100))
-            v = c * total
+            t = (Math.floor((newValues[1] / medium.length) * 100)) / 100 + '%'
+            c = (newValues[1] / (medium.length * 100))
+            v = (Math.floor((c * total) * 100)) / 100
         }
         else {
-            t = 20 / low.length + '%'
-            c = (20 / (low.length * 100))
-            v = c * total
+            t = (Math.floor((newValues[2] / low.length) * 100)) / 100 + '%'
+            c = (newValues[2] / (low.length * 100))
+            v = (Math.floor((c * total) * 100)) / 100
         }
-        console.log(t)
+        used += v
         percentages.push(c)
         return `<div class="align">
         <p>${cur.item}</p>
         <p>${t}</p>
-        <p>₦${v}</p>
+        <p>₦${v.toFixed(2)}</p>
     </div>
     <div class="back">
         <div class="color"></div>
     </div>`
-    }).join('');
+    }).join('')
     breakdown.innerHTML = html
     const back = document.querySelector('.back')
     const level = Array.from(document.querySelectorAll('.color'))
@@ -140,39 +169,60 @@ function showBreakdown() {
         cur.style.width = `${percentages[i] * back.offsetWidth}px`
         cur.style.backgroundColor = `${color}`
     })
-    console.log(back)
-    console.log(back.offsetWidth)
-    console.log(percentages)
 }
 
 function populate() {
+    used = 0
+    data = []
     total = amount.value
     showAmount.textContent = `₦${total}`
     if (!total) {
         alert('Please put an amount')
         return
     }
+    if (total <= 0) {
+        alert('Please put a positive amount')
+        return
+    }
 
     const exp = Array.from(document.querySelectorAll('.exp'))
     const inc = Array.from(document.querySelectorAll('.in'))
-    exp.forEach((cur, i) => {
-        if (cur.value == "") {
-            alert("Enter name of item");
-        } else {
+    try {
+        exp.forEach((cur, i) => {
+            if (!cur.value) {
+                throw alert('please put an item')
+            }
             const dat = {
                 item: cur.value,
                 id: cur.parentNode.id,
             }
             data[i] = dat
-        }
-    })
+        })
+    } catch (e) {
+        console.log(e)
+    }
     inc.forEach((cur, i) => {
         data[i].priority = cur.value
     })
-    console.log(data)        
-    showBreakdown()
+    try {
+        first.forEach(cur => {
+            if (!cur.value) {
+                throw alert('please allocate a percentage for priorities')
+            }
+        })
+        showBreakdown()
+    } catch (e) {
+        console.log(e)
+    }
+    //showBreakdown()
+    remaining.style.display = 'block'
+    span.textContent = `Remaining amount: ₦${(total - used).toFixed(2)}`
 }
+
+
 
 add.addEventListener('click', addNew)
 items.addEventListener('click', del)
 cal.addEventListener('click', populate)
+clearAll.addEventListener('click', removeAll)
+
