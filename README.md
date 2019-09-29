@@ -12,3 +12,6 @@ In order to test this out and play around with it locally on your machine
 * Merge to your master and compare forks with the original repository
 * Open a Pull Request.
 
+## Snapshot
+![HephBudget](https://github.com/hngi/Hephaestus-Budget/blob/master/assets/images/hephscreenshot.png)
+
