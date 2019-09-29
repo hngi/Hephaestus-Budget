@@ -33,7 +33,7 @@
                 </div>
 
                 <div class="form-group mb-4">
-                    <input name="pass" type="password" placeholder="Password" class="form-control" />
+                    <input name="pass" type="password" placeholder="New password" class="form-control" />
                 </div>
 
                 <div class="form-group mb-4">
