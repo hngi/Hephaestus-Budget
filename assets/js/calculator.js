@@ -89,6 +89,12 @@ function del(e) {
 function removeAll() {
     const item = Array.from(document.querySelectorAll('.rem'))
     item.forEach(cur => {
+        const item = cur.querySelector('.exp')
+        const pri = cur.querySelector('.in')
+        recycleBin[recycleBin.length] = {
+            item: item.value,
+            pri: pri.value
+        }
         const parent = cur.parentNode
         parent.removeChild(cur)
     });
