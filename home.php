@@ -68,6 +68,9 @@ if (isset($_POST['logout'])) {
                     <div class="icon">
                         <ion-icon class="add-icon" name="add-circle"></ion-icon>
                     </div>
+                    <div class="recover">
+                        <button id="recover" class="btn btn-info mx-2">Recover item</button>
+                    </div>
                     <div class="calc d-flex justify-content-center mt-5">
                         <button id="clear" class="btn btn-dark mx-2">Clear items</button>
                         <button id="cal" class="btn btn-info mx-2">Calculate</button>

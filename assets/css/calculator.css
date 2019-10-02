@@ -166,6 +166,12 @@
 .footer {
   color: #4fa3a8;
 }
+
+.recover {
+  margin-left: -5px;
+  margin-top: 10px;
+}
+
 @media screen and (max-width: 768px) {
   .footer {
     position: relative;

@@ -2,6 +2,7 @@ let total;
 
 let data = []
 let used = 0
+let recycleBin = []
 
 function idGenerator() {
     let id
@@ -40,6 +41,7 @@ const clearAll = document.querySelector('#clear')
 const remaining = document.querySelector('.remaining')
 const span = document.querySelector('.span')
 const first = document.querySelectorAll('.first')
+const recover = document.querySelector('#recover')
 
 
 
@@ -72,6 +74,12 @@ function remove(value) {
 function del(e) {
     if (e.target.id === "del") {
         const parent = e.target.parentNode
+        const item = parent.querySelector('.exp')
+        const pri = parent.querySelector('.in')
+        recycleBin[recycleBin.length] = {
+            item: item.value,
+            pri: pri.value
+        }
         const parentId = e.target.parentNode.id
         parent.parentNode.removeChild(parent)
         remove(parentId)
@@ -219,10 +227,29 @@ function populate() {
     span.textContent = `Remaining amount: ₦${(total - used).toFixed(2)}`
 }
 
+function recoverItem() {
+    const yes = recycleBin[recycleBin.length - 1].pri
+    const i = listIdGenerator()
+    const html = `<div class="item rem" id=${i}>
+   <input class="exp form-control mr-3" type="text" value=${recycleBin[recycleBin.length - 1].item}>
+    <select class="in">
+        <option ${yes === 'High' ? 'selected' : ''}>High</option>
+        <option ${yes === 'Medium' ? 'selected' : ''}>Medium</option>
+        <option ${yes === 'Low' ? 'selected' : ''}>Low</option>
+    </select>
+    <ion-icon class="del" name="close-circle" id="del"></ion-icon>
+</div>`
+    items.insertAdjacentHTML('beforeEnd', html)
+    var dat = { id: listIdGenerator() }
+    list.push(dat)
+    recycleBin.pop()
+}
+
 
 
 add.addEventListener('click', addNew)
 items.addEventListener('click', del)
 cal.addEventListener('click', populate)
 clearAll.addEventListener('click', removeAll)
+recover.addEventListener('click', recoverItem)
 
