@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="icon" type="image/png" href="assets/img/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="assets/img/favicon-32x32.png" sizes="32x32">
+    <link rel="stylesheet" href="assets/css/calculator.css" />
+</head>
+
+<body>
+    <header>
+        <div class="head">
+            <img class="sack" src="assets/img/sack.png">
+            <div class="cover">
+                <a href="#" class="options">HOME</a>
+                <a href="#" class="options">ABOUT</a>
+                <a href="#" class="options">CALCULATOR</a>
+                <a href="#" class="options">CONTACT</a>
+                <a href="#" class="options">Login</a>
+                <a href="#" class="options">Signup</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="flex-container">
+        <div class="input">
+            <div class="values">
+                <p>Enter Total Amount</p>
+                <input class="amount" type="number">
+            </div>
+            <div class="items-container">
+                <div>
+                    <p class="allocating">Allocate percentages for each priority</p>
+                    <div class="all">
+                        <div class="alloc">
+                            <p>High</p>
+                            <input class="first" type="number">
+                        </div>
+                        <div class="alloc">
+                            <p>Medium</p>
+                            <input class="first" type="number">
+                        </div>
+                        <div class="alloc">
+                            <p>Low</p>
+                            <input class="first" type="number">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="items">
+                    <div class="item" id="item">
+                        <p>Item</p>
+                        <p class="pri">Priority</p>
+                    </div>
+                    <!-- <div class="item rem" id="0">
+                        <input class="exp" type="text">
+                        <select class="in">
+                            <option>Top</option>
+                            <option>Medium</option>
+                            <option>Low</option>
+                        </select>
+                        <ion-icon class="del" name="close-circle" id="del"></ion-icon>
+                    </div> -->
+                </div>
+                <div class="icon">
+                    <ion-icon class="add-icon" name="add-circle"></ion-icon>
+                </div>
+                <div class="calc">
+                    <button id="clear">Clear All</button>
+                    <button id="cal">Calculate</button>
+                </div>
+            </div>
+        </div>
+        <div class="display">
+            <div class="graph">
+                <p>Total Budget:</p>
+                <p class="amount-showing">₦0.00</p>
+            </div>
+            <div class="breakdown">
+                <p>Budget Breakdown</p>
+                <div id="breakdown">
+                </div>
+                <div class="remaining">Remaining budget: <span class="span"></span></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+    <script type="text/javascript" src="assets/js/calculator.js"></script>
+</body>
+
+</html>
