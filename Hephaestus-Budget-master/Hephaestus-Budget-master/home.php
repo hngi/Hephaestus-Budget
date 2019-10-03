@@ -52,7 +52,7 @@ if (isset($_POST['logout'])) {
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled text-light font-weight-bold contact" href="#">Contact</a>
+                    <a class="nav-link disabled text-light font-weight-bold contact" href="contact.html">Contact</a>
                 </li>
             </ul>
             <form method="post"><small class=" text-light font-weight-bold position-relative mr-1"
