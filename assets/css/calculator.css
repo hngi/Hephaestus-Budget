@@ -10,6 +10,28 @@
   text-shadow: 0 1px 1px #bbb, 0 2px 0 #999, 0 3px 0 #888, 0 4px 0 #777,
     0 5px 0 #666, 0 6px 0 #555, 0 7px 0 #444, 0 8px 0 #333, 0 9px 7px #302314;
 }
+
+ .navbar-toggler-icon{
+  background-image: url(../images/menu.svg)!important;
+  
+}
+
+.nav-link{
+  font-size: 1em;
+  margin-right: 20px;
+}
+
+a.nav-link:hover {
+  background: #4fa3a8;
+  width: 70px;
+  padding: 15px 0px;
+  color: white!important;
+  box-shadow: 0px 3px 3px #298b92;
+}
+
+.contact{
+  margin-right: 50px;
+}
 .sack {
   position: relative;
   top: 0;
