@@ -22,6 +22,30 @@ body {
   box-shadow: 0px 2px 5px #0e5358;
   background: whitesmoke;
 }
+
+.navbar-toggler-icon{
+  background-image: url(../images/menu.svg)!important;
+  
+}
+
+.nav-link{
+  font-size: 1em;
+  margin-right: 20px;
+  color: #298b92;
+}
+
+a.nav-link:hover {
+  background: white;
+  width: 70px;
+  padding: 15px 0px;
+  color: #298b92;
+  box-shadow: 0px 3px 3px #298b92;
+}
+
+.contact{
+  margin-right: 50px;
+  color: #298b92;
+}
 div#intro {
   background: url("../images/green.png");
   background-size: 100% 100%;
