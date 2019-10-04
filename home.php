@@ -47,7 +47,7 @@ if (isset($_POST['logout'])) {
                         About</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="about.html">About Us</a>
-                        <a class="dropdown-item" href="#">FAQ</a>
+                        <a class="dropdown-item" href="faq.html">FAQ</a>
 
                     </div>
                 </li>
