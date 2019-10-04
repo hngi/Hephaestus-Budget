@@ -46,13 +46,13 @@ if (isset($_POST['logout'])) {
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                         About</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">About Us</a>
+                            <a class="dropdown-item" href="index.html">About Us</a>
                         <a class="dropdown-item" href="#">FAQ</a>
 
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled text-light font-weight-bold contact" href="#">Contact</a>
+                    <a class="nav-link disabled text-light font-weight-bold contact" href="contact.html">Contact</a>
                 </li>
             </ul>
             <form method="post"><small class=" text-light font-weight-bold position-relative mr-1"

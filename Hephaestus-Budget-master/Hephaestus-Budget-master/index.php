@@ -41,7 +41,7 @@ if (isset($_SESSION['user'])) {
                     </div>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link font-weight-bold contact" href="#">Contact</a>
+                    <a class="nav-link font-weight-bold contact" href="contact.html">Contact</a>
                 </li>
             </ul>
             <div>
