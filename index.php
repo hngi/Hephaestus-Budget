@@ -67,7 +67,7 @@ if (isset($_SESSION['user'])) {
       <div class="inner-feature">
         <img src="assets/images/calc.png" />
         <p class="color">
-          <a href="https://hephbudget.herokuapp.com/home.php" target="_blank"> Easily create budgets based on priorities set on each item.</a>
+          <a href="https://hephbudget.herokuapp.com/login.php" target="_blank"> Easily create budgets based on priorities set on each item.</a>
         </p>
       </div>
       <div class="inner-feature">
