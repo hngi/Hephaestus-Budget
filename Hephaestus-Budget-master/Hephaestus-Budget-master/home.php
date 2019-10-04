@@ -32,6 +32,40 @@ if (isset($_POST['logout'])) {
     <p class="m-0"><a href="./" class="nav-link hephbrand text-light h5 font-weight-bold" style="color: inherit">HephBudget</a></p>
         <form method="post"><small class=" text-light font-weight-bold position-relative mr-1" style="font-size: 14px; top: 1px">Hello <?php echo $user['name'] ?> </small>
             <button name="logout" type="submit" class="btn badge badge-danger p-2"> <i class="fa fa-power-off"></i></button></form>
+
+<nav class="navbar navbar-expand-lg head">
+        <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <p class="m-0"><a href="./" class="nav-link hephbrand text-light h5 font-weight-bold"
+                style="color: inherit">HephBudget</a></p>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link text-light font-weight-bold" href="index.php">Home </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-light font-weight-bold" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                        About</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">About Us</a>
+                        <a class="dropdown-item" href="#">FAQ</a>
+
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled text-light font-weight-bold contact" href="contact.html">Contact</a>
+                </li>
+            </ul>
+            <form method="post"><small class=" text-light font-weight-bold position-relative mr-1"
+                    style="font-size: 14px; top: 1px">Hello <?php echo $user['name'] ?> </small>
+                <button name="logout" type="submit" class="btn badge badge-danger p-2"> <i
+                        class="fa fa-power-off"></i></button></form>
+        </div>
+
     </nav>
 
     <div class="position-absolute w-100 h-100" style="top: 0">
@@ -60,7 +94,10 @@ if (isset($_POST['logout'])) {
                         </div>
                     </div>
                     <div class="items pt-2">
+
                         <div class="item id=" item">
+
+                        <div class="item" id="item">
                             <p>Item</p>
                             <p class="pri mr-5">Priority</p>
                         </div>
@@ -68,6 +105,11 @@ if (isset($_POST['logout'])) {
                     <div class="icon">
                         <ion-icon class="add-icon" name="add-circle"></ion-icon>
                     </div>
+
+                    <div class="recover">
+                        <button id="recover" class="btn btn-info mx-2">Recover item</button>
+                    </div>
+
                     <div class="calc d-flex justify-content-center mt-5">
                         <button id="clear" class="btn btn-dark mx-2">Clear items</button>
                         <button id="cal" class="btn btn-info mx-2">Calculate</button>
@@ -96,6 +138,21 @@ if (isset($_POST['logout'])) {
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
     <script type="text/javascript" src="assets/js/calculator.js"></script>
+
 </body>
 
 </html>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+
