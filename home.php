@@ -35,11 +35,33 @@ if (isset($_POST['logout'])) {
 
 <body>
 
+
     <nav class="navbar head p-0 px-2">
     <p class="m-0"><a href="./" class="nav-link hephbrand text-light h5 font-weight-bold" style="color: inherit">HephBudget</a></p>
         <form method="post">
             
         <img class="profile-circle" src="<?php echo $imageURL; ?>" alt="User Image"/><span class=""></span>
+
+<nav class="navbar navbar-expand-lg head">
+        <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <p class="m-0"><a href="./" class="nav-link hephbrand text-light h5 font-weight-bold"
+                style="color: inherit">HephBudget</a></p>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link text-light font-weight-bold" href="index.php">Home </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-light font-weight-bold" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                        About</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="about.html">About Us</a>
+                        <a class="dropdown-item" href="faq.html">FAQ</a>
 
     <small class=" text-light font-weight-bold position-relative mr-1" style="font-size: 14px; top: 1px">
     
