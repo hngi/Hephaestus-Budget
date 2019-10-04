@@ -18,6 +18,15 @@ if (isset($_SESSION['user'])) {
 </head>
 
 <body>
+
+  <nav class="d-flex justify-content-between p-3 hephnav">
+    <p class="h3 font-weight-bold text-info m-0" id="heph">HephBudget</p>
+    <div>
+      <a href="login.php" class="btn btn-sm btn-info">Login</a>
+      <a href="signup.php" class="btn btn-sm btn-info">Sign up</a>
+    </div>
+  </nav>
+
 <nav class="navbar navbar-expand-lg hephnav">
         <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
             aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,6 +59,7 @@ if (isset($_SESSION['user'])) {
             </div>
         </div>
     </nav>
+
   <div id="intro" class="px-3 py-3">
     <div class="container cl">
       <div class="text-center">
@@ -66,12 +76,20 @@ if (isset($_SESSION['user'])) {
       <div class="inner-feature">
         <img src="assets/images/calc.png" />
         <p>
+
+         <a href="https://hephbudget.herokuapp.com/home.php" target="_blank"> Easily create budgets based on priorities set on each item.</a>
+
           Easily create budgets based on priorities set on each item.
+
         </p>
       </div>
       <div class="inner-feature">
         <img src="assets/images/mobile.png" />
+
+        <p><a href="https://medium.com/@faitygal/hephas-budget-tracker-easy-access-on-multiple-devices-e81595913156" target="_blank"> Easy access on multiple devices</a></p>
+
         <p>Easy access on multiple devices</p>
+
       </div>
     </div>
   </div>

@@ -28,6 +28,11 @@ if (isset($_POST['logout'])) {
 
 <body>
 
+    <nav class="navbar head p-0 px-2 ">
+    <p class="m-0"><a href="./" class="nav-link hephbrand text-light h5 font-weight-bold" style="color: inherit">HephBudget</a></p>
+        <form method="post"><small class=" text-light font-weight-bold position-relative mr-1" style="font-size: 14px; top: 1px">Hello <?php echo $user['name'] ?> </small>
+            <button name="logout" type="submit" class="btn badge badge-danger p-2"> <i class="fa fa-power-off"></i></button></form>
+
 <nav class="navbar navbar-expand-lg head">
         <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
             aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,6 +65,7 @@ if (isset($_POST['logout'])) {
                 <button name="logout" type="submit" class="btn badge badge-danger p-2"> <i
                         class="fa fa-power-off"></i></button></form>
         </div>
+
     </nav>
 
     <div class="position-absolute w-100 h-100" style="top: 0">
@@ -88,6 +94,9 @@ if (isset($_POST['logout'])) {
                         </div>
                     </div>
                     <div class="items pt-2">
+
+                        <div class="item id=" item">
+
                         <div class="item" id="item">
                             <p>Item</p>
                             <p class="pri mr-5">Priority</p>
@@ -96,9 +105,11 @@ if (isset($_POST['logout'])) {
                     <div class="icon">
                         <ion-icon class="add-icon" name="add-circle"></ion-icon>
                     </div>
+
                     <div class="recover">
                         <button id="recover" class="btn btn-info mx-2">Recover item</button>
                     </div>
+
                     <div class="calc d-flex justify-content-center mt-5">
                         <button id="clear" class="btn btn-dark mx-2">Clear items</button>
                         <button id="cal" class="btn btn-info mx-2">Calculate</button>
@@ -127,6 +138,11 @@ if (isset($_POST['logout'])) {
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
     <script type="text/javascript" src="assets/js/calculator.js"></script>
+
+</body>
+
+</html>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -139,3 +155,4 @@ if (isset($_POST['logout'])) {
 </body>
 
 </html>
+
