@@ -6,6 +6,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="google-signin-client_id" content="1289063844-s1lerd5lrbb8n2vnr0p1bcel8t448vsu.apps.googleusercontent.com">
+    <meta name="google-signin-scope" content="profile email">
     <title>Hephbudget | Sign up</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css" />
@@ -40,8 +42,29 @@
                     <input name="rpass" type="password" placeholder="Confirm password " class="form-control" />
                 </div>
                 <div class="form-group">
-                    <button type="submit" class="btn btn-success" name="signup">Sign up</button>
-                </div>
+                    <button type="submit" class="btn btn-success" name="signup" style="position: relative; top: -13px">Sign up</button>
+                    <div id="my-signin2" style="display: inline-block; position: relative; left: 40px;"></div>
+                    <script>
+                        function onSuccess(googleUser) {
+                        console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+                        }
+                        function onFailure(error) {
+                        console.log(error);
+                        }
+                        function renderButton() {
+                        gapi.signin2.render('my-signin2', {
+                            'scope': 'profile email',
+                            'width': 260,
+                            'height': 35,
+                            'longtitle': true,
+                            'theme': 'light',
+                            'onsuccess': onSuccess,
+                            'onfailure': onFailure
+                        });
+                        }
+                    </script>
+                    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+                    </div>
             </form>
             <section class="mt-3 text-center">
                 <a href="login.php" class="btn-title">Login to your account</a>
