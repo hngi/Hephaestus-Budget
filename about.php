@@ -49,12 +49,12 @@ a:hover, a:active {
         .wrapper {
             text-align: center;
             background: rgb(65, 145, 101);
-            color: white;
+            color: blue;
         }
 
         h2 {
             font-family: sans-serif;
-            color: white;
+            color:black;
         }
 
         h4 {
@@ -62,7 +62,7 @@ a:hover, a:active {
         }
 
         h5 {
-            color: white;
+            color: red;
         }
    </style>
 </head>
