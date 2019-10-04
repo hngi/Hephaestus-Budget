@@ -2,9 +2,7 @@ let total;
 
 let data = []
 let used = 0
-
 let recycleBin = []
-
 
 function idGenerator() {
     let id
@@ -43,12 +41,7 @@ const clearAll = document.querySelector('#clear')
 const remaining = document.querySelector('.remaining')
 const span = document.querySelector('.span')
 const first = document.querySelectorAll('.first')
-
-const recover = document.querySelector('#recover');
-
-const select = document.querySelector('#select');
-console.log(select.value);
-
+const recover = document.querySelector('#recover')
 
 
 
@@ -96,7 +89,6 @@ function del(e) {
 function removeAll() {
     const item = Array.from(document.querySelectorAll('.rem'))
     item.forEach(cur => {
-
         const item = cur.querySelector('.exp')
         const pri = cur.querySelector('.in')
         recycleBin[recycleBin.length] = {
@@ -108,7 +100,6 @@ function removeAll() {
     });
     breakdown.innerHTML = "";
     span.innerHTML = "";
-
 }
 
 
@@ -151,11 +142,7 @@ function showBreakdown() {
         })
         newVal = (cur / sum) * 100
         return newVal
-
-     
-
     })
-
 
     const html = data.map(cur => {
         let t, v, c
@@ -170,27 +157,11 @@ function showBreakdown() {
             v = (Math.floor((c * total) * 100)) / 100
         }
         else {
-// <<<<<<< HEAD
-// <<<<<<< HEAD
-//             t = 20 / low.length + '%'
-//             c = (20 / (low.length * 100))
-//             v = c * total
-//         }
-//         console.log(t)
-// =======
-//             t = (Math.floor((newValues[2] / low.length) * 100)) / 100 + '%'
-//             c = (newValues[2] / (low.length * 100))
-//             v = (Math.floor((c * total) * 100)) / 100
-//         }
-//         used += v
-// >>>>>>> upstream/hephbudget-frontend
-
             t = (Math.floor((newValues[2] / low.length) * 100)) / 100 + '%'
             c = (newValues[2] / (low.length * 100))
             v = (Math.floor((c * total) * 100)) / 100
         }
         used += v
-
         percentages.push(c)
         return `<div class="align">
         <p>${cur.item}</p>
@@ -223,21 +194,6 @@ function populate() {
         alert('Please put an amount')
         return
     }
-
-    /*if (total <= 0) {
-        alert('Please put a positive amount')
-        return
-    }
-    
-    const exp = Array.from(document.querySelectorAll('.exp'))
-    const inc = Array.from(document.querySelectorAll('.in'))
-    try {
-        exp.forEach((cur, i) => {
-            if(!cur.value) {
-                throw alert('please put an item')
-            }
->>>>>>> upstream/hephbudget-frontend */
-
     if (total <= 0) {
         alert('Please put a positive amount')
         return
@@ -250,25 +206,11 @@ function populate() {
             if (!cur.value) {
                 throw alert('please put an item')
             }
-
             const dat = {
                 item: cur.value,
                 id: cur.parentNode.id,
             }
             data[i] = dat
-/* <<<<<<< HEAD
-
-        })
-    } catch(e) {
-        console.log(e)
-    }
-    inc.forEach((cur, i) => {
-        data[i].priority = cur.value
-    })
-    try {
-        first.forEach(cur => {
-            if(!cur.value) {
-======= */
         })
     } catch (e) {
         console.log(e)
@@ -279,26 +221,16 @@ function populate() {
     try {
         first.forEach(cur => {
             if (!cur.value) {
-
                 throw alert('please allocate a percentage for priorities')
             }
         })
         showBreakdown()
-// <<<<<<< HEAD
-//     } catch(e) {
-// =======
     } catch (e) {
-
         console.log(e)
     }
     //showBreakdown()
     remaining.style.display = 'block'
-/* <<<<<<< HEAD
-    span.textContent = `${total - used}`
->>>>>>> upstream/hephbudget-frontend */
-
     span.textContent = `Remaining amount: ₦${(total - used).toFixed(2)}`
-
 }
 
 function recoverItem() {
@@ -321,10 +253,9 @@ function recoverItem() {
 
 
 
-add.addEventListener('click', addNew);
-items.addEventListener('click', del);
-cal.addEventListener('click', populate);
-clearAll.addEventListener('click', removeAll);
-recover.addEventListener('click', recoverItem);
-
+add.addEventListener('click', addNew)
+items.addEventListener('click', del)
+cal.addEventListener('click', populate)
+clearAll.addEventListener('click', removeAll)
+recover.addEventListener('click', recoverItem)
 

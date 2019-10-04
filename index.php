@@ -18,12 +18,6 @@ if (isset($_SESSION['user'])) {
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg hephnav">
-        <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
-            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <p class="h3 font-weight-bold text-info m-0" id="heph">HephBudget</p>
 
        <nav class="navbar navbar-expand-lg hephnav">
         <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
