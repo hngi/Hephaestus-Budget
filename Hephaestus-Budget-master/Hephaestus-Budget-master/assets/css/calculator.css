@@ -65,7 +65,6 @@
 }
 
 .items-container {
-<<<<<<< HEAD
   height: auto;
   background-color: white;
   box-shadow: 0px 0px 20px rgba(134, 62, 62, 0.32), 0px 0px 10px #e5e5e5;
@@ -73,16 +72,6 @@
   border-bottom-right-radius: 10px;
   position: relative;
   width: 100%;
-=======
-    height: auto;
-    background-color: white;
-    box-shadow: 0px 0px 20px rgba(134, 62, 62, 0.32), 0px 0px 10px #E5E5E5;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    position: relative;
-    padding-bottom: 20px;
-    padding-top: 10px
->>>>>>> upstream/hephbudget-frontend
 }
 
 .all {
@@ -120,32 +109,11 @@
   padding-left: 10px;
 }
 
-<<<<<<< HEAD
 .calc > button {
   width: 149px;
   height: 44px;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
   color: white;
-=======
-
-button {
-    margin-top: 60px;
-    /* margin-left: 95.5px; */
-    width: 149px;
-    height: 44px;
-    background-color: #FE5F55;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    color: white;
->>>>>>> upstream/hephbudget-frontend
-}
-
-#clear {
-    margin-left: 15px;
-}
-
-#cal {
-    margin-left: 10px;
 }
 
 .breakdown {
@@ -187,7 +155,6 @@ button {
 }
 
 .del {
-<<<<<<< HEAD
   color: red;
   width: 30px;
   height: 30px;
@@ -199,91 +166,9 @@ button {
 .footer {
   color: #4fa3a8;
 }
-
-.recover {
-  margin-left: -5px;
-  margin-top: 10px;
-}
-
 @media screen and (max-width: 768px) {
   .footer {
     position: relative;
     margin-top: 50px;
   }
 }
-<<<<<<< HEAD
-=======
-    color: red;
-    width: 30px;
-    height: 30px;
-    margin-left: 5px;
-}
-
-.remaining {
-    margin-top: 20px;
-    display: none
-}
-
-.allocating {
-    margin-left: 20px;
-    width: 80%
-}
-
-.all {
-    margin-top: -15px;
-    margin-left: 20px;
-    display: flex;
-    justify-content: flex-start;
-    margin-bottom: 10px;
-}
-
-.alloc {
-    margin-right: 60px;
-}
-
-.first {
-    width: 40px;
-    height: auto
-}
-
-@media only screen and (max-width: 1000px) {
-    /* .flex-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    } */
-
-    .display {
-        width: 400px
-    }
-}
-
-@media only screen and (max-width: 850px) {
-    .flex-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .display {
-        width: 544px;
-    }
-
-    .input {
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-}
-
-@media only screen and (max-width: 650px) {
-    .display {
-        width: 360px;
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-}
-
-
->>>>>>> upstream/hephbudget-frontend
-=======
->>>>>>> 25196faddac5ce2b6a9d4e8f0fe3fc13c54c4f8f

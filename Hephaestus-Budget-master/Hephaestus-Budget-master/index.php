@@ -41,12 +41,13 @@ if (isset($_SESSION['user'])) {
       <div class="inner-feature">
         <img src="assets/images/calc.png" />
         <p>
-          Easily create budgets based on priorities set on each item.
+          <a href="https://hephbudget.herokuapp.com/home.php" target="_blank">Easily create budgets based on priorities set on each item.</a>
         </p>
       </div>
       <div class="inner-feature">
         <img src="assets/images/mobile.png" />
-        <p>Easy access on multiple devices</p>
+        <p>
+        <a href="https://medium.com/@faitygal/hephas-budget-tracker-easy-access-on-multiple-devices-e81595913156" target="_blank">Easy access on multiple devices</a></p>
       </div>
     </div>
   </div>
