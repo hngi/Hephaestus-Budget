@@ -144,6 +144,9 @@ a.btn-title:hover {
   font-weight: bold;
   font-size: 14px;
 }
+.color{
+  color: #000000;
+ }
 @media screen and (max-width: 768px) {
   div#intro > div {
     width: 100%;
