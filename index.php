@@ -35,7 +35,7 @@ if (isset($_SESSION['user'])) {
                         role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         About</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="index.html">About Us</a>
+                        <a class="dropdown-item" href="about.html">About Us</a>
                         <a class="dropdown-item" href="#">FAQ</a>
 
                     </div>
