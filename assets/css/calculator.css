@@ -10,6 +10,28 @@
   text-shadow: 0 1px 1px #bbb, 0 2px 0 #999, 0 3px 0 #888, 0 4px 0 #777,
     0 5px 0 #666, 0 6px 0 #555, 0 7px 0 #444, 0 8px 0 #333, 0 9px 7px #302314;
 }
+
+ .navbar-toggler-icon{
+  background-image: url(../images/menu.svg)!important;
+  
+}
+
+.nav-link{
+  font-size: 1em;
+  margin-right: 20px;
+}
+
+a.nav-link:hover {
+  background: #4fa3a8;
+  width: 70px;
+  padding: 15px 0px;
+  color: white!important;
+  box-shadow: 0px 3px 3px #298b92;
+}
+
+.contact{
+  margin-right: 50px;
+}
 .sack {
   position: relative;
   top: 0;
@@ -65,7 +87,7 @@
 }
 
 .items-container {
-<<<<<<< HEAD
+/* <<<<<<< HEAD
   height: auto;
   background-color: white;
   box-shadow: 0px 0px 20px rgba(134, 62, 62, 0.32), 0px 0px 10px #e5e5e5;
@@ -73,7 +95,7 @@
   border-bottom-right-radius: 10px;
   position: relative;
   width: 100%;
-=======
+======= */
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 20px rgba(134, 62, 62, 0.32), 0px 0px 10px #E5E5E5;
@@ -82,7 +104,7 @@
     position: relative;
     padding-bottom: 20px;
     padding-top: 10px
->>>>>>> upstream/hephbudget-frontend
+
 }
 
 .all {
@@ -120,13 +142,13 @@
   padding-left: 10px;
 }
 
-<<<<<<< HEAD
+/* <<<<<<< HEAD
 .calc > button {
   width: 149px;
   height: 44px;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
   color: white;
-=======
+======= */
 
 button {
     margin-top: 60px;
@@ -137,7 +159,7 @@ button {
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     color: white;
->>>>>>> upstream/hephbudget-frontend
+
 }
 
 #clear {
@@ -187,7 +209,7 @@ button {
 }
 
 .del {
-<<<<<<< HEAD
+/* <<<<<<< HEAD
   color: red;
   width: 30px;
   height: 30px;
@@ -210,9 +232,9 @@ button {
     position: relative;
     margin-top: 50px;
   }
-}
-<<<<<<< HEAD
-=======
+} */
+/* <<<<<<< HEAD
+======= */
     color: red;
     width: 30px;
     height: 30px;
@@ -221,7 +243,7 @@ button {
 
 .remaining {
     margin-top: 20px;
-    display: none
+    display: none;
 }
 
 .allocating {
@@ -284,6 +306,4 @@ button {
 }
 
 
->>>>>>> upstream/hephbudget-frontend
-=======
->>>>>>> 25196faddac5ce2b6a9d4e8f0fe3fc13c54c4f8f
+

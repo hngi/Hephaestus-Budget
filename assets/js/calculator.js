@@ -2,10 +2,9 @@ let total;
 
 let data = []
 let used = 0
-<<<<<<< HEAD
-=======
+
 let recycleBin = []
->>>>>>> 25196faddac5ce2b6a9d4e8f0fe3fc13c54c4f8f
+
 
 function idGenerator() {
     let id
@@ -44,10 +43,12 @@ const clearAll = document.querySelector('#clear')
 const remaining = document.querySelector('.remaining')
 const span = document.querySelector('.span')
 const first = document.querySelectorAll('.first')
-<<<<<<< HEAD
-=======
-const recover = document.querySelector('#recover')
->>>>>>> 25196faddac5ce2b6a9d4e8f0fe3fc13c54c4f8f
+
+const recover = document.querySelector('#recover');
+
+const select = document.querySelector('#select');
+console.log(select.value);
+
 
 
 
@@ -95,11 +96,7 @@ function del(e) {
 function removeAll() {
     const item = Array.from(document.querySelectorAll('.rem'))
     item.forEach(cur => {
-<<<<<<< HEAD
-        const parent = cur.parentNode
-        parent.removeChild(cur)
-    })
-=======
+
         const item = cur.querySelector('.exp')
         const pri = cur.querySelector('.in')
         recycleBin[recycleBin.length] = {
@@ -111,7 +108,7 @@ function removeAll() {
     });
     breakdown.innerHTML = "";
     span.innerHTML = "";
->>>>>>> 25196faddac5ce2b6a9d4e8f0fe3fc13c54c4f8f
+
 }
 
 
@@ -154,11 +151,11 @@ function showBreakdown() {
         })
         newVal = (cur / sum) * 100
         return newVal
-<<<<<<< HEAD
-    })  
-=======
+
+     
+
     })
->>>>>>> 25196faddac5ce2b6a9d4e8f0fe3fc13c54c4f8f
+
 
     const html = data.map(cur => {
         let t, v, c
@@ -173,27 +170,27 @@ function showBreakdown() {
             v = (Math.floor((c * total) * 100)) / 100
         }
         else {
-<<<<<<< HEAD
-<<<<<<< HEAD
-            t = 20 / low.length + '%'
-            c = (20 / (low.length * 100))
-            v = c * total
-        }
-        console.log(t)
-=======
+// <<<<<<< HEAD
+// <<<<<<< HEAD
+//             t = 20 / low.length + '%'
+//             c = (20 / (low.length * 100))
+//             v = c * total
+//         }
+//         console.log(t)
+// =======
+//             t = (Math.floor((newValues[2] / low.length) * 100)) / 100 + '%'
+//             c = (newValues[2] / (low.length * 100))
+//             v = (Math.floor((c * total) * 100)) / 100
+//         }
+//         used += v
+// >>>>>>> upstream/hephbudget-frontend
+
             t = (Math.floor((newValues[2] / low.length) * 100)) / 100 + '%'
             c = (newValues[2] / (low.length * 100))
             v = (Math.floor((c * total) * 100)) / 100
         }
         used += v
->>>>>>> upstream/hephbudget-frontend
-=======
-            t = (Math.floor((newValues[2] / low.length) * 100)) / 100 + '%'
-            c = (newValues[2] / (low.length * 100))
-            v = (Math.floor((c * total) * 100)) / 100
-        }
-        used += v
->>>>>>> 25196faddac5ce2b6a9d4e8f0fe3fc13c54c4f8f
+
         percentages.push(c)
         return `<div class="align">
         <p>${cur.item}</p>
@@ -226,17 +223,8 @@ function populate() {
         alert('Please put an amount')
         return
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-    const exp = Array.from(document.querySelectorAll('.exp'))
-    const inc = Array.from(document.querySelectorAll('.in'))
-    exp.forEach((cur, i) => {
-        if (cur.value == "") {
-            alert("Enter name of item");
-        } else {
-=======
-    if (total <= 0) {
+    /*if (total <= 0) {
         alert('Please put a positive amount')
         return
     }
@@ -248,8 +236,8 @@ function populate() {
             if(!cur.value) {
                 throw alert('please put an item')
             }
->>>>>>> upstream/hephbudget-frontend
-=======
+>>>>>>> upstream/hephbudget-frontend */
+
     if (total <= 0) {
         alert('Please put a positive amount')
         return
@@ -262,22 +250,14 @@ function populate() {
             if (!cur.value) {
                 throw alert('please put an item')
             }
->>>>>>> 25196faddac5ce2b6a9d4e8f0fe3fc13c54c4f8f
+
             const dat = {
                 item: cur.value,
                 id: cur.parentNode.id,
             }
             data[i] = dat
-<<<<<<< HEAD
-<<<<<<< HEAD
-        }
-    })
-    inc.forEach((cur, i) => {
-        data[i].priority = cur.value
-    })
-    console.log(data)        
-    showBreakdown()
-=======
+/* <<<<<<< HEAD
+
         })
     } catch(e) {
         console.log(e)
@@ -288,7 +268,7 @@ function populate() {
     try {
         first.forEach(cur => {
             if(!cur.value) {
-=======
+======= */
         })
     } catch (e) {
         console.log(e)
@@ -299,26 +279,26 @@ function populate() {
     try {
         first.forEach(cur => {
             if (!cur.value) {
->>>>>>> 25196faddac5ce2b6a9d4e8f0fe3fc13c54c4f8f
+
                 throw alert('please allocate a percentage for priorities')
             }
         })
         showBreakdown()
-<<<<<<< HEAD
-    } catch(e) {
-=======
+// <<<<<<< HEAD
+//     } catch(e) {
+// =======
     } catch (e) {
->>>>>>> 25196faddac5ce2b6a9d4e8f0fe3fc13c54c4f8f
+
         console.log(e)
     }
     //showBreakdown()
     remaining.style.display = 'block'
-<<<<<<< HEAD
+/* <<<<<<< HEAD
     span.textContent = `${total - used}`
->>>>>>> upstream/hephbudget-frontend
-=======
+>>>>>>> upstream/hephbudget-frontend */
+
     span.textContent = `Remaining amount: ₦${(total - used).toFixed(2)}`
->>>>>>> 25196faddac5ce2b6a9d4e8f0fe3fc13c54c4f8f
+
 }
 
 function recoverItem() {
@@ -341,13 +321,10 @@ function recoverItem() {
 
 
 
-add.addEventListener('click', addNew)
-items.addEventListener('click', del)
-cal.addEventListener('click', populate)
-clearAll.addEventListener('click', removeAll)
-<<<<<<< HEAD
+add.addEventListener('click', addNew);
+items.addEventListener('click', del);
+cal.addEventListener('click', populate);
+clearAll.addEventListener('click', removeAll);
+recover.addEventListener('click', recoverItem);
 
-=======
-recover.addEventListener('click', recoverItem)
->>>>>>> 25196faddac5ce2b6a9d4e8f0fe3fc13c54c4f8f
 

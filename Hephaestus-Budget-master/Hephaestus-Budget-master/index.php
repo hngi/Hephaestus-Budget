@@ -18,13 +18,38 @@ if (isset($_SESSION['user'])) {
 </head>
 
 <body>
-  <nav class="d-flex justify-content-between p-3 hephnav">
-    <p class="h3 font-weight-bold text-info m-0" id="heph">HephBudget</p>
-    <div>
-      <a href="login.php" class="btn btn-sm btn-info">Login</a>
-      <a href="signup.php" class="btn btn-sm btn-info">Sign up</a>
-    </div>
-  </nav>
+<nav class="navbar navbar-expand-lg hephnav">
+        <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <p class="h3 font-weight-bold text-info m-0" id="heph">HephBudget</p>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link font-weight-bold" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle font-weight-bold" href="#" id="navbarDropdownMenuLink"
+                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        About</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">About Us</a>
+                        <a class="dropdown-item" href="#">FAQ</a>
+
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link font-weight-bold contact" href="contact.html">Contact</a>
+                </li>
+            </ul>
+            <div>
+                <a href="login.php" class="btn btn-sm btn-info">Login</a>
+                <a href="signup.php" class="btn btn-sm btn-info">Sign up</a>
+            </div>
+        </div>
+    </nav>
   <div id="intro" class="px-3 py-3">
     <div class="container cl">
       <div class="text-center">
@@ -41,13 +66,12 @@ if (isset($_SESSION['user'])) {
       <div class="inner-feature">
         <img src="assets/images/calc.png" />
         <p>
-          <a href="https://hephbudget.herokuapp.com/home.php" target="_blank">Easily create budgets based on priorities set on each item.</a>
+          Easily create budgets based on priorities set on each item.
         </p>
       </div>
       <div class="inner-feature">
         <img src="assets/images/mobile.png" />
-        <p>
-        <a href="https://medium.com/@faitygal/hephas-budget-tracker-easy-access-on-multiple-devices-e81595913156" target="_blank">Easy access on multiple devices</a></p>
+        <p>Easy access on multiple devices</p>
       </div>
     </div>
   </div>
