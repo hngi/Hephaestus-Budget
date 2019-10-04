@@ -36,13 +36,13 @@ if (isset($_SESSION['user'])) {
                         role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         About</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="about.html">About Us</a>
-                        <a class="dropdown-item" href="faq.html">FAQ</a>
+                        <a class="dropdown-item" href="about.php">About Us</a>
+                        <a class="dropdown-item" href="faq.php">FAQ</a>
 
                     </div>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link font-weight-bold contact" href="contact.html">Contact</a>
+                    <a class="nav-link font-weight-bold contact" href="contact.php">Contact</a>
                 </li>
             </ul>
             <div>
