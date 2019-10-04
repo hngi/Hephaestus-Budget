@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  font-family: "Nunito", sans-serif;
+  background: whitesmoke;
+}
+#heph {
+  text-shadow: 0 1px 1px #bbb, 0 2px 0 whitesmoke, 0 3px 0 whitesmoke;
+  position: relative;
+  top: 2px;
+}
+.hephbrand {
+  text-shadow: 0 1px 1px #bbb, 0 2px 0 #999, 0 3px 0 #888, 0 4px 0 #777,
+    0 5px 0 #666, 0 6px 0 #555, 0 7px 0 #444, 0 8px 0 #333, 0 9px 7px #302314;
+}
+.heph-small {
+  text-shadow: 0 1px 1px #bbb, 0 2px 0 #999, 0 3px 0 #888, 0 4px 0 #777;
+}
+.hephnav {
+  box-shadow: 0px 2px 5px #0e5358;
+  background: whitesmoke;
+}
+
+.navbar-toggler-icon{
+  background-image: url(../images/menu.svg)!important;
+  
+}
+
+.nav-link{
+  font-size: 1em;
+  margin-right: 20px;
+  color: #298b92;
+}
+
+a.nav-link:hover {
+  background: white;
+  width: 70px;
+  padding: 15px 0px;
+  color: #298b92;
+  box-shadow: 0px 3px 3px #298b92;
+}
+
+.contact{
+  margin-right: 50px;
+  color: #298b92;
+}
+div#intro {
+  background: url("../images/green.png");
+  background-size: 100% 100%;
+}
+div#intro > .container {
+  min-height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+/*Background icon positioning */
+.greenbg,
+.whitebg {
+  width: 100%;
+  z-index: -1;
+}
+
+.greenbg {
+  top: 0%;
+  bottom: 0%;
+}
+
+.whitebg {
+  top: 30%;
+}
+
+.form {
+  margin: auto;
+  height: fit-content;
+  background: #fff;
+  box-shadow: 1px 1px 10px #27262675;
+  border: 1px solid white;
+  border-radius: 4px;
+}
+
+.btn-title {
+  background: #298b92;
+  border-radius: 100px;
+  width: 200px;
+  padding: 15px 0px;
+  color: ghostwhite;
+  display: inline-block;
+  color: white;
+  border: none;
+  outline: none;
+  box-shadow: 0px 3px 3px #0e5358;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+}
+a.btn-title:hover {
+  background: ghostwhite;
+  width: 200px;
+  padding: 15px 0px;
+  color: #298b92;
+  box-shadow: 0px 3px 3px #298b92;
+}
+
+.features-row {
+  display: flex;
+  justify-content: space-around;
+  margin: 2%;
+  flex-wrap: wrap;
+}
+
+.inner-feature img {
+  margin-bottom: 10%;
+}
+
+.inner-feature p {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.inner-feature {
+  display: flex;
+  flex-direction: column;
+  padding: 1%;
+  box-shadow: 0px 0px 7px #6fa29e8a;
+  flex: 1;
+  margin: 3%;
+  border-radius: 2px;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0px;
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+  color: #298b92;
+  font-weight: bold;
+  font-size: 14px;
+}
+@media screen and (max-width: 768px) {
+  div#intro > div {
+    width: 100%;
+  }
+  #hephbot > img {
+    height: 50%;
+    width: 50%;
+  }
+  .features-row {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 420px) {
+  #heph {
+    font-size: 20px;
+  }
+  #heph_img {
+    width: 100%;
+  }
+}
