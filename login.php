@@ -60,6 +60,15 @@
                         }
                     </script>
                     <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+                    <div id="gSignInWrapper">
+                        <span class="label">Sign in with:</span>
+                        <div id="customBtn" class="customGPlusSignIn">
+                        <span class="icon"></span>
+                        <span class="buttonText">Google</span>
+                        </div>
+                    </div>
+                    <div id="name"></div>
+                    <script>startApp();</script>
                 </div>
             </form>
             <section class="mt-3 text-center">
