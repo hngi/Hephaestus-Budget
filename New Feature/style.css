@@ -1,0 +1,36 @@
+.star{
+    color: goldenrod;
+    font-size: 2.0rem;
+    padding: 0 1rem; /* space out the stars */
+  }
+  .star::before{
+    content: '\2606';
+    cursor: pointer;
+  }
+  .star:hover::before{
+    /* the :hover should come first */
+    content: '\2605';
+    color: #bada55;
+  }
+  .star.rated::before{
+    /* the :hover should come first */
+    content: '\2605';
+  }
+
+  textarea {
+    width: 400px;
+    height: 80px;
+    background-color: white;
+    resize: none;
+  }
+
+  button {
+    width: 100px;
+    height: 30px;
+    background-color: #282828;
+    border: none;
+    color: #ffffff;
+    font-weight: 400;
+    cursor: pointer;
+  }
+
