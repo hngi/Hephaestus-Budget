@@ -19,42 +19,7 @@ if (isset($_SESSION['user'])) {
 
 <body>
 
-<<<<<<< HEAD
 <?php include("partials/navigation.php"); ?>
-=======
-       <nav class="navbar navbar-expand-lg hephnav">
-        <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
-            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <p class="h3 font-weight-bold text-info m-0" id="heph">HephBudget</p>
-
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link font-weight-bold" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle font-weight-bold" href="#" id="navbarDropdownMenuLink"
-                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        About</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="about.php">About Us</a>
-                        <a class="dropdown-item" href="faq.php">FAQ</a>
-
-                    </div>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link font-weight-bold contact" href="contact.php">Contact</a>
-                </li>
-            </ul>
-            <div>
-                <a href="login.php" class="btn btn-sm btn-info">Login</a>
-                <a href="signup.php" class="btn btn-sm btn-info">Sign up</a>
-            </div>
-        </div>
-    </nav>
->>>>>>> 809f2203d51fe8318bff17cd2163885034ddfd97
   <div id="intro" class="px-3 py-3">
     <div class="container cl">
       <div class="text-center">
