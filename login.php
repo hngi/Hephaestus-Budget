@@ -17,7 +17,7 @@
         <img class="position-fixed greenbg" src="assets/images/green.png" alt="" />
         <img class="position-fixed whitebg" src="assets/images/white.png" alt="" />
     </div>
-    <p class="p-2 m-0"><a href="index.php"class="nav-link hephbrand text-light h5 font-weight-bold" style="color: inherit">HephBudget</a></p>
+    <p class="p-2 m-0"><a href="./" class="nav-link hephbrand text-light h5 font-weight-bold" style="color: inherit">HephBudget</a></p>
     <div class="d-flex position-absolute justify-content-center  align-items-center w-100 h-100">
         <div class="col-md-5">
             <form method="post" class="px-4 py-3 form">

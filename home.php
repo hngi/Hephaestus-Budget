@@ -5,6 +5,8 @@ if (!isset($_SESSION['user'])) {
     header("location: ./login.php");
 } else {
     $user = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM registered_user WHERE id = {$_SESSION['user']}"));
+    $imageURL = 'user_uploads/'.$user["image"];
+
 }
 if (isset($_POST['logout'])) {
     session_unset();
@@ -23,43 +25,26 @@ if (isset($_POST['logout'])) {
     <title>HephBudget</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/calculator.css" />
+    <link rel="stylesheet" href="assets/js/bootstrap.min.js" />
+    <link rel="stylesheet" href="assets/js/jquery.min.js" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 </head>
 
 <body>
 
-<nav class="navbar navbar-expand-lg head">
-        <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
-            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <p class="m-0"><a href="./" class="nav-link hephbrand text-light h5 font-weight-bold"
-                style="color: inherit">HephBudget</a></p>
+    <nav class="navbar head p-0 px-2">
+    <p class="m-0"><a href="./" class="nav-link hephbrand text-light h5 font-weight-bold" style="color: inherit">HephBudget</a></p>
+        <form method="post">
+            
+        <img class="profile-circle" src="<?php echo $imageURL; ?>" alt="User Image"/><span class=""></span>
 
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link text-light font-weight-bold" href="index.php">Home </a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-light font-weight-bold" href="#" id="navbarDropdownMenuLink" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-                        About</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="about.html">About Us</a>
-                        <a class="dropdown-item" href="#">FAQ</a>
-
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled text-light font-weight-bold contact" href="contact.html">Contact</a>
-                </li>
-            </ul>
-            <form method="post"><small class=" text-light font-weight-bold position-relative mr-1"
-                    style="font-size: 14px; top: 1px">Hello <?php echo $user['name'] ?> </small>
-                <button name="logout" type="submit" class="btn badge badge-danger p-2"> <i
-                        class="fa fa-power-off"></i></button></form>
-        </div>
+    <small class=" text-light font-weight-bold position-relative mr-1" style="font-size: 14px; top: 1px">
+    
+    <?php echo $user['name'] ?></small>
+            <button name="logout" type="submit" class="btn badge badge-danger p-2"> <i class="fa fa-power-off"></i></button></form>
     </nav>
 
     <div class="position-absolute w-100 h-100" style="top: 0">
@@ -127,15 +112,6 @@ if (isset($_POST['logout'])) {
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
     <script type="text/javascript" src="assets/js/calculator.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
 </body>
 
 </html>
