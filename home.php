@@ -28,39 +28,7 @@ if (isset($_POST['logout'])) {
 
 <body>
 
-<nav class="navbar navbar-expand-lg head">
-        <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
-            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <p class="m-0"><a href="./" class="nav-link hephbrand text-light h5 font-weight-bold"
-                style="color: inherit">HephBudget</a></p>
-
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link text-light font-weight-bold" href="index.php">Home </a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-light font-weight-bold" href="#" id="navbarDropdownMenuLink" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-                        About</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="about.html">About Us</a>
-                        <a class="dropdown-item" href="faq.html">FAQ</a>
-
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled text-light font-weight-bold contact" href="contact.html">Contact</a>
-                </li>
-            </ul>
-            <form method="post"><small class=" text-light font-weight-bold position-relative mr-1"
-                    style="font-size: 14px; top: 1px">Hello <?php echo $user['name'] ?> </small>
-                <button name="logout" type="submit" class="btn badge badge-danger p-2"> <i
-                        class="fa fa-power-off"></i></button></form>
-        </div>
-    </nav>
+<?php include("partials/navigation.php"); ?>
 
     <div class="position-absolute w-100 h-100" style="top: 0">
         <div class="d-md-flex justify-content-center pt-5 my-5">
