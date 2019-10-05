@@ -53,7 +53,7 @@ if (isset($_POST['logout'])) {
                 </li>
             </ul>
             <form method="post">
-                <img class="profile-circle" src="<?php echo $user['image']; ?>" alt="User Image" /><span class=""></span>
+                <img class="profile-circle" src="<?php echo "user_uploads/".$user['image']; ?>" alt="User Image" /><span class=""></span>
                 <small class=" text-light font-weight-bold position-relative mr-1" style="font-size: 14px; top: 1px">
                     <?php echo $user['name'] ?></small>
                 <button name="logout" type="submit" class="btn badge badge-danger p-2"> <i class="fa fa-power-off"></i></button>
