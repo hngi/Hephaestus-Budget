@@ -181,3 +181,21 @@ a.btn-title:hover {
     width: 100%;
   }
 }
+
+.profile-circle {
+  width: 45px;
+  height: 44px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-border-radius: 99em;
+  -moz-border-radius: 99em;
+  border-radius: 99em;
+  border: 2px solid #eee;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+  vertical-align: middle;
+  position: relative;
+  left: -12px;
+  top: -2px;
+
+}
