@@ -39,7 +39,7 @@
                 <div class="form-group">
                     <button type="submit" class="btn btn-success" name="login" style="position: relative; top: -13px">Login</button>
                     <a href="password_reset.php" class="float-right text-info" style="font-size: 15px;">I forgot my password</a>
-                    <div id="my-signin2" style="display: inline-block; position: relative; left: 40px;"></div>
+                    <div id="my-signin2" style="display: inline-block; position: relative; left: 10px;"></div>
                     <script>
                         function onSuccess(googleUser) {
                         console.log('Logged in as: ' + googleUser.getBasicProfile().getName());

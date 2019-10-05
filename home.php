@@ -5,6 +5,8 @@ if (!isset($_SESSION['user'])) {
     header("location: ./login.php");
 } else {
     $user = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM registered_user WHERE id = {$_SESSION['user']}"));
+    $imageURL = 'user_uploads/'.$user["image"];
+
 }
 if (isset($_POST['logout'])) {
     session_unset();
@@ -22,13 +24,25 @@ if (isset($_POST['logout'])) {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HephBudget</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/calculator.css" />
+    <link rel="stylesheet" href="assets/js/bootstrap.min.js" />
+    <link rel="stylesheet" href="assets/js/jquery.min.js" />
 </head>
 
 <body>
+<nav class="navbar head p-0 px-2">
+    <p class="m-0"><a href="./" class="nav-link hephbrand text-light h5 font-weight-bold" style="color: inherit">HephBudget</a></p>
+        <form method="post">
+            
+        <img class="profile-circle" src="<?php echo $imageURL; ?>" alt="User Image"/><span class=""></span>
 
-<?php include("partials/navigation.php"); ?>
+    <small class=" text-light font-weight-bold position-relative mr-1" style="font-size: 14px; top: 1px">
+    
+    <?php echo $user['name'] ?></small>
+            <button name="logout" type="submit" class="btn badge badge-danger p-2"> <i class="fa fa-power-off"></i></button></form>
+    </nav>
 
     <div class="position-absolute w-100 h-100" style="top: 0">
         <div class="d-md-flex justify-content-center pt-5 my-5">
@@ -93,7 +107,6 @@ if (isset($_POST['logout'])) {
 
 
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-
     <script type="text/javascript" src="assets/js/calculator.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
