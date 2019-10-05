@@ -22,7 +22,7 @@
     <p class="p-2 m-0"><a href="index.php" class="nav-link hephbrand text-light h5 font-weight-bold" style="color: inherit">HephBudget</a></p>
     <div class="d-flex position-absolute justify-content-center  align-items-center w-100 h-100">
         <div class="col-md-5">
-            <form method="post" class="px-4 py-3 form">
+        <form method="post" class="px-4 py-3 form" enctype="multipart/form-data">
                 <h5 class="text-center pb-2" style="color: #298b92;">Create an account</h5>
                 <?php if (isset($fbk)) : ?>
                     <div class="alert alert-<?php echo $fbk["color"]; ?>">
@@ -41,30 +41,36 @@
                 <div class="form-group mb-4">
                     <input name="rpass" type="password" placeholder="Confirm password " class="form-control" />
                 </div>
+                <div class="form-group mb-4">
+                    <label style="color: #298b92;">Upload Image</label>
+                    <input name="user_image" type="file" class="form-control" />
+                </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-success" name="signup" style="position: relative; top: -13px">Sign up</button>
                     <div id="my-signin2" style="display: inline-block; position: relative; left: 40px;"></div>
                     <script>
                         function onSuccess(googleUser) {
-                        console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+                            console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
                         }
+
                         function onFailure(error) {
-                        console.log(error);
+                            console.log(error);
                         }
+
                         function renderButton() {
-                        gapi.signin2.render('my-signin2', {
-                            'scope': 'profile email',
-                            'width': 260,
-                            'height': 35,
-                            'longtitle': true,
-                            'theme': 'light',
-                            'onsuccess': onSuccess,
-                            'onfailure': onFailure
-                        });
+                            gapi.signin2.render('my-signin2', {
+                                'scope': 'profile email',
+                                'width': 260,
+                                'height': 35,
+                                'longtitle': true,
+                                'theme': 'light',
+                                'onsuccess': onSuccess,
+                                'onfailure': onFailure
+                            });
                         }
                     </script>
                     <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
-                    </div>
+                </div>
             </form>
             <section class="mt-3 text-center">
                 <a href="login.php" class="btn-title">Login to your account</a>
