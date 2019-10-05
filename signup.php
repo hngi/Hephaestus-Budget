@@ -43,7 +43,7 @@
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-success" name="signup" style="position: relative; top: -13px">Sign up</button>
-                    <div id="my-signin2" style="display: inline-block; position: relative; left: 40px;"></div>
+                    <div id="my-signin2" data-onsuccess="onSignIn" style="display: inline-block; position: relative; left: 40px;"></div>
                     <script>
                         function onSuccess(googleUser) {
                         console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
@@ -64,6 +64,8 @@
                         }
                     </script>
                     <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+                    <div id="name"></div>
+                    <script>startApp();</script>
                     </div>
             </form>
             <section class="mt-3 text-center">
