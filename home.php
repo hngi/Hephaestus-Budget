@@ -24,6 +24,25 @@ if (isset($_POST['logout'])) {
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/calculator.css" />
+    <style>
+    .profile-circle {
+  width: 45px;
+  height: 44px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-border-radius: 99em;
+  -moz-border-radius: 99em;
+  border-radius: 99em;
+  border: 2px solid #eee;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+  vertical-align: middle;
+  position: relative;
+  left: -12px;
+  top: -2px;
+
+}
+    </style>
 </head>
 
 <body>
@@ -53,7 +72,7 @@ if (isset($_POST['logout'])) {
                 </li>
             </ul>
             <form method="post">
-                <img class="profile-circle" src="<?php echo "user_uploads/".$user['image']; ?>" alt="User Image" /><span class=""></span>
+                <img class="profile-circle" src="<?php echo $user['image']; ?>" alt="User Image" /><span class=""></span>
                 <small class=" text-light font-weight-bold position-relative mr-1" style="font-size: 14px; top: 1px">
                     <?php echo $user['name'] ?></small>
                 <button name="logout" type="submit" class="btn badge badge-danger p-2"> <i class="fa fa-power-off"></i></button>

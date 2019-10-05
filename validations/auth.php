@@ -52,7 +52,7 @@ if (isset($_POST['signup']) && !empty($_FILES["user_image"]["name"])) {
         $imgSize = $_FILES['user_image']['size'];
 
         // upload directory
-        $target_dir = 'user_uploads/';
+        $target_dir = './user_uploads/';
 
         $target_file = $target_dir . basename($_FILES["user_image"]["name"]);
 
@@ -86,7 +86,7 @@ if (isset($_POST['signup']) && !empty($_FILES["user_image"]["name"])) {
             $pass = md5($rpass);
 
             if (move_uploaded_file($_FILES["user_image"]["tmp_name"], $target_file)) {
-                $new_user_query =  mysqli_query($conn, "INSERT INTO registered_user(`name`, `email`, `password`, `image`) VALUES('$name', '$email',  '$pass', '$imgName')");
+                $new_user_query =  mysqli_query($conn, "INSERT INTO registered_user(`name`, `email`, `password`, `image`) VALUES('$name', '$email',  '$pass', '$target_file/$imgName')");
 
                 if ($new_user_query == TRUE) {
                     $name = $email = "";
